@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Vandalism and Attacks Tracker</title>
+    <!-- Google Fonts (Montserrat and Archivo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (for styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js (for charts) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-900 text-white font-archivo">
+    <!-- Header -->
+    <header class="bg-gray-800 p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-montserrat font-bold">Tesla Vandalism and Attacks Tracker</h1>
+        <button id="theme-toggle" class="bg-gray-700 px-3 py-1 rounded">Toggle Dark/Light Mode</button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="p-4">
+        <!-- Latest Incident Ticker -->
+        <div id="ticker" class="bg-red-600 p-3 mb-4 rounded text-center font-montserrat">
+            Latest Incident: Loading...
+        </div>
+
+        <!-- Chart Section -->
+        <section class="mb-8">
+            <h2 class="text-xl font-montserrat mb-4">Incidents by Type</h2>
+            <canvas id="incident-chart" class="max-w-lg mx-auto"></canvas>
+        </section>
+
+        <!-- Filter Bar -->
+        <section class="mb-8 flex flex-wrap gap-4">
+            <div>
+                <label for="type-filter" class="font-montserrat">Filter by Type:</label>
+                <select id="type-filter" class="bg-gray-700 p-2 rounded">
+                    <option value="all">All Types</option>
+                    <option value="Physical Damage">Physical Damage</option>
+                    <option value="Graffiti & Symbolic Attacks">Graffiti & Symbolic Attacks</option>
+                    <option value="Arson & Explosions">Arson & Explosions</option>
+                    <option value="Firearm Attacks">Firearm Attacks</option>
+                    <option value="Theft & Sabotage">Theft & Sabotage</option>
+                    <option value="Protests & Organized Actions">Protests & Organized Actions</option>
+                    <option value="Other Anti-Tesla Actions">Other Anti-Tesla Actions</option>
+                </select>
+            </div>
+            <div>
+                <label for="sort-order" class="font-montserrat">Sort by Date:</label>
+                <select id="sort-order" class="bg-gray-700 p-2 rounded">
+                    <option value="newest">Newest to Oldest</option>
+                    <option value="oldest">Oldest to Newest</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Incident Cards -->
+        <section id="incidents" class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Cards will be dynamically added by JavaScript -->
+        </section>
+
+        <!-- Submit New Incident Button -->
+        <section class="mt-8 text-center">
+            <button id="submit-btn" class="bg-red-600 px-4 py-2 rounded font-montserrat hover:bg-red-700">Submit a New Incident</button>
+        </section>
+    </main>
+
+    <!-- Submission Modal (Hidden by Default) -->
+    <div id="submit-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-gray-800 p-6 rounded max-w-md w-full">
+            <h2 class="text-xl font-montserrat mb-4">Submit a New Incident</h2>
+            <form id="submit-form">
+                <div class="mb-4">
+                    <label for="submit-date" class="block font-montserrat">Date:</label>
+                    <input type="date" id="submit-date" class="w-full bg-gray-700 p-2 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="submit-location" class="block font-montserrat">Location:</label>
+                    <input type="text" id="submit-location" class="w-full bg-gray-700 p-2 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="submit-type" class="block font-montserrat">Type:</label>
+                    <select id="submit-type" class="w-full bg-gray-700 p-2 rounded" required>
+                        <option value="Physical Damage">Physical Damage</option>
+                        <option value="Graffiti & Symbolic Attacks">Graffiti & Symbolic Attacks</option>
+                        <option value="Arson & Explosions">Arson & Explosions</option>
+                        <option value="Firearm Attacks">Firearm Attacks</option>
+                        <option value="Theft & Sabotage">Theft & Sabotage</option>
+                        <option value="Protests & Organized Actions">Protests & Organized Actions</option>
+                        <option value="Other Anti-Tesla Actions">Other Anti-Tesla Actions</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="submit-description" class="block font-montserrat">Description:</label>
+                    <textarea id="submit-description" class="w-full bg-gray-700 p-2 rounded" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="submit-sources" class="block font-montserrat">Sources (optional):</label>
+                    <textarea id="submit-sources" class="w-full bg-gray-700 p-2 rounded"></textarea>
+                </div>
+                <div class="flex justify-between">
+                    <button type="button" id="submit-via-email" class="bg-gray-600 px-4 py-2 rounded font-montserrat">Submit via Email</button>
+                    <button type="button" id="submit-via-github" class="bg-gray-600 px-4 py-2 rounded font-montserrat">Submit via GitHub</button>
+                    <button type="button" id="close-modal" class="bg-gray-600 px-4 py-2 rounded font-montserrat">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
