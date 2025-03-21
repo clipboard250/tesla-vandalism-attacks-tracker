@@ -119,6 +119,13 @@ header {
     font-weight: 600; /* Slightly bolder labels */
 }
 
+/* Disclaimer for unverified incidents */
+.disclaimer {
+    color: #ffcc00; /* Yellow warning color */
+    font-style: italic;
+    margin-top: 8px;
+}
+
 /* Buttons */
 button {
     background-color: var(--accent-color);

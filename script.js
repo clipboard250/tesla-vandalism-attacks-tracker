@@ -42,12 +42,16 @@ function displayIncidents(incidents) {
     incidents.forEach(incident => {
         const card = document.createElement('div');
         card.className = 'incident-card';
-        card.innerHTML = `
+        let html = `
             <h3 class="text-lg font-archivo-black">${formatDate(incident.date)} - ${incident.type}</h3>
             <p class="font-montserrat"><strong>Location:</strong> ${incident.location}</p>
             <p class="font-montserrat">${incident.description}</p>
             <p class="font-montserrat"><strong>News Links:</strong> ${incident.newsLinks.map(link => `<a href="${link.url}" target="_blank" class="text-red-500 hover:underline">${link.title}</a>`).join(', ')}</p>
         `;
+        if (!incident.verified) {
+            html += `<p class="disclaimer">⚠️ *This incident has not yet been independently verified.*</p>`;
+        }
+        card.innerHTML = html;
         incidentsContainer.appendChild(card);
     });
 }
@@ -62,16 +66,25 @@ function updateTicker(incidents) {
 
 // Filter and sort incidents
 document.getElementById('type-filter').addEventListener('change', filterAndSort);
+document.getElementById('verified-filter').addEventListener('change', filterAndSort);
 document.getElementById('sort-order').addEventListener('change', filterAndSort);
 
 function filterAndSort() {
     let filteredIncidents = [...window.incidents];
     const typeFilter = document.getElementById('type-filter').value;
+    const verifiedFilter = document.getElementById('verified-filter').value;
     const sortOrder = document.getElementById('sort-order').value;
 
     // Filter by type
     if (typeFilter !== 'all') {
         filteredIncidents = filteredIncidents.filter(incident => incident.type === typeFilter);
+    }
+
+    // Filter by verification status
+    if (verifiedFilter === 'verified') {
+        filteredIncidents = filteredIncidents.filter(incident => incident.verified);
+    } else if (verifiedFilter === 'unverified') {
+        filteredIncidents = filteredIncidents.filter(incident => !incident.verified);
     }
 
     // Sort by date
