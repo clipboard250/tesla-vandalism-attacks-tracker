@@ -11,9 +11,15 @@ fetch('incidents.json')
         return response.json();
     })
     .then(data => {
-        window.incidents = data; // Store incidents globally (already sorted newest to oldest in incidents.json)
-        displayIncidents(data); // Initial display
-        updateTicker(data); // Update the latest incident ticker
+        window.incidents = data; // Store incidents globally
+        // Sort incidents by date (newest to oldest) initially
+        window.incidents.sort((a, b) => {
+            const dateA = new Date(a.date + 'T00:00:00Z');
+            const dateB = new Date(b.date + 'T00:00:00Z');
+            return dateB - dateA; // Newest to oldest
+        });
+        displayIncidents(window.incidents); // Initial display
+        updateTicker(window.incidents); // Update the latest incident ticker
     })
     .catch(error => {
         console.error('Error loading incidents:', error);
@@ -96,7 +102,7 @@ function displayIncidents(incidents) {
             <p class="font-montserrat"><strong>Location:</strong> ${incident.location}</p>
             <p class="font-montserrat">${incident.description}</p>
             <p class="font-montserrat"><strong>News Links:</strong> ${incident.newsLinks.map(link => {
-                const sourceName = extractSourceName(link.url); // Use URL to extract source name
+                const sourceName = extractSourceName(link.url);
                 return `<a href="${link.url}" target="_blank" class="text-red-500 hover:underline">${sourceName}</a>`;
             }).join(', ')}</p>
         `;
@@ -112,7 +118,7 @@ function displayIncidents(incidents) {
 function updateTicker(incidents) {
     const tickerContent = document.getElementById('ticker-content');
     const tickerContentDuplicate = document.getElementById('ticker-content-duplicate');
-    const latestIncident = incidents[0]; // Already sorted newest to oldest in incidents.json
+    const latestIncident = incidents[0]; // First incident after sorting (newest)
     const tickerText = `Latest Incident: ${formatDate(latestIncident.date)} - ${latestIncident.location} - ${latestIncident.type} - ${latestIncident.description}`;
     tickerContent.textContent = tickerText;
     tickerContentDuplicate.textContent = tickerText; // Duplicate the content for seamless looping
@@ -142,13 +148,11 @@ function filterAndSort() {
     }
 
     // Sort by date
-    if (sortOrder !== 'newest') {
-        filteredIncidents.sort((a, b) => {
-            const dateA = new Date(a.date + 'T00:00:00Z');
-            const dateB = new Date(b.date + 'T00:00:00Z');
-            return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
-        });
-    }
+    filteredIncidents.sort((a, b) => {
+        const dateA = new Date(a.date + 'T00:00:00Z');
+        const dateB = new Date(b.date + 'T00:00:00Z');
+        return sortOrder === 'newest' ? dateB - dateA : dateA - dateB; // Newest to oldest or oldest to newest
+    });
 
     // Log the sorted incidents for debugging
     console.log('Sorted incidents:', filteredIncidents.map(incident => `${incident.date} - ${incident.type}`));
@@ -160,7 +164,7 @@ function filterAndSort() {
 
 // Convert incidents to CSV format
 function convertToCSV(incidents) {
-    const headers = ['Date', 'Location', 'Type', 'Description', 'News Links', 'Verified'];
+    const headers = ['Date', 'Location', 'Type', 'Description', 'News Links', 'Additional Sources', 'Verified'];
     const rows = incidents.map(incident => {
         const newsLinks = incident.newsLinks.map(link => `${extractSourceName(link.url)}: ${link.url}`).join('; ');
         return [
@@ -169,6 +173,7 @@ function convertToCSV(incidents) {
             incident.type,
             `"${incident.description.replace(/"/g, '""')}"`, // Escape quotes in description
             `"${newsLinks.replace(/"/g, '""')}"`, // Escape quotes in news links
+            `"${incident.additionalSources.replace(/"/g, '""')}"`, // Escape quotes in additional sources
             incident.verified ? 'Yes' : 'No'
         ];
     });
