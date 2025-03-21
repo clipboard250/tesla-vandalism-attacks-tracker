@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tesla Vandalism and Attacks Tracker</title>
     <!-- Google Fonts (Montserrat and Archivo) -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Archivo:wght@400;500&family=Archivo+Black&display=swap" rel="stylesheet">
     <!-- Tailwind CSS (for styling) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js (for charts) -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- Custom JavaScript -->
@@ -28,12 +26,6 @@
         <div id="ticker" class="bg-red-600 p-3 mb-4 rounded text-center font-montserrat">
             Latest Incident: Loading...
         </div>
-
-        <!-- Chart Section -->
-        <section class="mb-8">
-            <h2 class="text-xl font-montserrat mb-4">Incidents by Type</h2>
-            <canvas id="incident-chart" class="max-w-lg mx-auto"></canvas>
-        </section>
 
         <!-- Filter Bar -->
         <section class="mb-8 flex flex-wrap gap-4">
@@ -56,6 +48,9 @@
                     <option value="newest">Newest to Oldest</option>
                     <option value="oldest">Oldest to Newest</option>
                 </select>
+            </div>
+            <div>
+                <button id="export-btn" class="bg-red-600 px-4 py-2 rounded font-montserrat hover:bg-red-700">Export Filtered Incidents</button>
             </div>
         </section>
 

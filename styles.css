@@ -42,7 +42,7 @@ h1, h2, h3 {
 }
 
 /* Ensure all text inherits the correct color */
-p, div, span, a {
+p, div, span, a, label {
     color: var(--text-color);
 }
 
@@ -68,11 +68,6 @@ header {
 #ticker {
     background-color: var(--accent-color);
     color: #ffffff;
-}
-
-/* Chart */
-#incident-chart {
-    max-width: 600px; /* Ensure chart doesn’t stretch too wide */
 }
 
 /* Cards */
@@ -127,4 +122,20 @@ button:hover {
 
 [data-theme="light"] #submit-modal .bg-gray-800 {
     background-color: #ffffff; /* White in light mode */
+}
+
+/* Modal form elements */
+#submit-modal input,
+#submit-modal select,
+#submit-modal textarea {
+    color: var(--text-color);
+    background-color: #4b5563; /* Darker gray for inputs in dark mode */
+    border: 1px solid #6b7280;
+}
+
+[data-theme="light"] #submit-modal input,
+[data-theme="light"] #submit-modal select,
+[data-theme="light"] #submit-modal textarea {
+    background-color: #e5e7eb; /* Light gray for inputs in light mode */
+    border: 1px solid #d1d5db;
 }
