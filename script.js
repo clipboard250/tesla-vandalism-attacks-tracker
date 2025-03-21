@@ -47,7 +47,6 @@ function displayIncidents(incidents) {
             <p class="font-montserrat"><strong>Location:</strong> ${incident.location}</p>
             <p class="font-montserrat">${incident.description}</p>
             <p class="font-montserrat"><strong>News Links:</strong> ${incident.newsLinks.map(link => `<a href="${link.url}" target="_blank" class="text-red-500 hover:underline">${link.title}</a>`).join(', ')}</p>
-            <p class="font-montserrat"><strong>Additional Sources:</strong> ${incident.additionalSources}</p>
         `;
         incidentsContainer.appendChild(card);
     });
@@ -73,21 +72,15 @@ function filterAndSort() {
     // Filter by type
     if (typeFilter !== 'all') {
         filteredIncidents = filteredIncidents.filter(incident => incident.type === typeFilter);
-        // Sort by date only if a specific type is selected
+    }
+
+    // Sort by date
+    if (sortOrder !== 'newest') {
         filteredIncidents.sort((a, b) => {
             const dateA = new Date(a.date + 'T00:00:00Z');
             const dateB = new Date(b.date + 'T00:00:00Z');
             return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
         });
-    } else {
-        // For "All Types", preserve the initial order from incidents.json unless the user changes the sort order
-        if (sortOrder !== 'newest') {
-            filteredIncidents.sort((a, b) => {
-                const dateA = new Date(a.date + 'T00:00:00Z');
-                const dateB = new Date(b.date + 'T00:00:00Z');
-                return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
-            });
-        }
     }
 
     // Log the sorted incidents for debugging
@@ -100,7 +93,7 @@ function filterAndSort() {
 
 // Convert incidents to CSV format
 function convertToCSV(incidents) {
-    const headers = ['Date', 'Location', 'Type', 'Description', 'News Links', 'Additional Sources'];
+    const headers = ['Date', 'Location', 'Type', 'Description', 'News Links', 'Verified'];
     const rows = incidents.map(incident => {
         const newsLinks = incident.newsLinks.map(link => `${link.title}: ${link.url}`).join('; ');
         return [
@@ -109,7 +102,7 @@ function convertToCSV(incidents) {
             incident.type,
             `"${incident.description.replace(/"/g, '""')}"`, // Escape quotes in description
             `"${newsLinks.replace(/"/g, '""')}"`, // Escape quotes in news links
-            `"${incident.additionalSources.replace(/"/g, '""')}"` // Escape quotes in additional sources
+            incident.verified ? 'Yes' : 'No'
         ];
     });
     return [
@@ -148,8 +141,10 @@ function exportToPDF(incidents, filename) {
                 yPos += 7;
             });
         }
-        doc.text(`Additional Sources: ${incident.additionalSources}`, 10, yPos);
-        yPos += 10;
+        if (!incident.verified) {
+            doc.text('⚠️ This incident has not yet been independently verified.', 10, yPos);
+            yPos += 7;
+        }
     });
 
     doc.save(filename);
@@ -191,7 +186,7 @@ themeToggle.addEventListener('click', () => {
 // Submission modal
 const submitBtn = document.getElementById('submit-btn');
 const submitModal = document.getElementById('submit-modal');
-const closeModal = document.getElementById('submit-modal');
+const closeModal = document.getElementById('close-modal');
 const submitViaEmail = document.getElementById('submit-via-email');
 const submitViaGitHub = document.getElementById('submit-via-github');
 
