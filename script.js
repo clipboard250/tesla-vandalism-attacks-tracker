@@ -48,16 +48,16 @@ function extractSourceName(title) {
         'Firstpost', 'LiveNOW from FOX', 'CSIS', 'NPR', 'LA Times', 'El País', 'Statesman Journal',
         'Kansas City Star', 'KSHB', 'KTVZ', 'DOJ SC', 'DOJ Colorado', 'Boston.com'
     ];
-    // Split the title into words
-    const words = title.split(' ');
-    // Check if the first word or a combination of words matches a known source
-    for (let i = 0; i < words.length; i++) {
-        const potentialSource = words.slice(0, i + 1).join(' ');
-        if (knownSources.includes(potentialSource)) {
-            return potentialSource;
+    // Convert title to lowercase for case-insensitive matching
+    const titleLower = title.toLowerCase();
+    // Search for each known source in the title
+    for (const source of knownSources) {
+        if (titleLower.includes(source.toLowerCase())) {
+            return source; // Return the matching source name
         }
     }
-    // Fallback: Use the first word if no match is found
+    // Fallback: If no known source is found, return the first word as a last resort
+    const words = title.split(' ');
     return words[0];
 }
 
