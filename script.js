@@ -17,14 +17,18 @@ fetch('incidents.json')
         incidentsContainer.innerHTML = '<p class="text-red-500">Error loading incidents. Please try again later.</p>';
     });
 
-// Format date as "Mar 7, 2025"
+// Format date as "Mar 7, 2025" using UTC to avoid timezone shifts
 function formatDate(dateString) {
     try {
-        const date = new Date(dateString + 'T00:00:00Z'); // Parse as UTC to avoid timezone shifts
+        const date = new Date(dateString + 'T00:00:00Z'); // Parse as UTC
         if (isNaN(date)) {
             throw new Error('Invalid date');
         }
-        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const month = months[date.getUTCMonth()];
+        const day = date.getUTCDate();
+        const year = date.getUTCFullYear();
+        return `${month} ${day}, ${year}`;
     } catch (error) {
         console.error('Error formatting date:', error);
         return dateString; // Fallback to original string if formatting fails
