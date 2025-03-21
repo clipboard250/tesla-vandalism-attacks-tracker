@@ -70,12 +70,16 @@ function filterAndSort() {
         filteredIncidents = filteredIncidents.filter(incident => incident.type === typeFilter);
     }
 
-    // Sort by date
+    // Sort by date with debugging
     filteredIncidents.sort((a, b) => {
         const dateA = new Date(a.date);
         const dateB = new Date(b.date);
+        console.log(`Sorting: ${a.date} (${dateA}) vs ${b.date} (${dateB})`); // Debugging
         return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
     });
+
+    // Log the sorted incidents
+    console.log('Sorted incidents:', filteredIncidents.map(incident => incident.date));
 
     displayIncidents(filteredIncidents);
     window.currentFilteredIncidents = filteredIncidents; // Store filtered incidents for export

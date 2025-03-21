@@ -12,7 +12,7 @@
         "location": "Loveland, CO",
         "type": "Graffiti & Symbolic Attacks",
         "description": "Serial graffiti attacks: A 42-year-old suspect vandalized a Tesla dealership multiple times. She spray-painted 'Nazi' under the entrance sign and on 15 vehicles. Lucy Grace Nelson was arrested in February and charged with malicious destruction of property.",
-        "newsLinks": [{"title": "CBS News", "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"}],
+        "newsLinks": [],
         "additionalSources": "DOJ Press Release"
     },
     {
@@ -20,7 +20,7 @@
         "location": "Loveland, CO",
         "type": "Graffiti & Symbolic Attacks",
         "description": "Nazi spray-paint on Tesla dealership sign.",
-        "newsLinks": [{"title": "AP News", "url": "https://example.com"}],
+        "newsLinks": [],
         "additionalSources": "-"
     },
     {
@@ -28,7 +28,7 @@
         "location": "Loveland, CO",
         "type": "Graffiti & Symbolic Attacks",
         "description": "Nazi spray-paint on 15 Tesla vehicles.",
-        "newsLinks": [{"title": "AP News", "url": "https://example.com"}],
+        "newsLinks": [],
         "additionalSources": "-"
     },
     {
@@ -36,7 +36,7 @@
         "location": "Owings Mills, MD",
         "type": "Graffiti & Symbolic Attacks",
         "description": "Anti-Musk graffiti: After a protest at a Tesla dealership, police found 'No Musk' scrawled with a swastika on the building.",
-        "newsLinks": [{"title": "Economic Times", "url": "https://m.economictimes.com/news/international/us/tesla-under-siege-after-nationwide-attacks-on-showrooms-heres-what-police-are-investigation-after-trumps-domestic-terrorists-charges/articleshow/118948255.cms"}],
+        "newsLinks": [],
         "additionalSources": "CBS News"
     },
     {
@@ -44,7 +44,7 @@
         "location": "Brookline, MA",
         "type": "Graffiti & Symbolic Attacks",
         "description": "Stickers on vehicles: A 39-year-old man placed stickers of Elon Musk’s face on several Teslas, calling it 'free speech.' He was charged with six counts of defacing property.",
-        "newsLinks": [{"title": "CBS News", "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"}],
+        "newsLinks": [],
         "additionalSources": "-"
     },
     {
@@ -52,15 +52,15 @@
         "location": "Lynnwood, WA",
         "type": "Graffiti & Symbolic Attacks",
         "description": "Hate graffiti on Cybertrucks: Six Tesla Cybertrucks at a Seattle-area dealership were spray-painted with swastikas and profanities directed at Elon Musk.",
-        "newsLinks": [{"title": "AP News", "url": "https://apnews.com/article/tesla-dealership-shooting-oregon-elon-musk-782907d226f22d5dc583d3abeefd34e2"}],
+        "newsLinks": [],
         "additionalSources": "KING5 Seattle"
     },
     {
-        "date": "2025-01-01",
+        "date": "2024-12-31",
         "location": "Las Vegas, NV",
         "type": "Arson & Explosions",
         "description": "A Cybertruck exploded outside the Trump International.",
-        "newsLinks": [{"title": "AP News", "url": "https://example.com"}],
+        "newsLinks": [],
         "additionalSources": "ABC News"
     },
     {
@@ -68,7 +68,7 @@
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
         "description": "Molotov cocktail attacks (series): Over five late-Jan to Feb incidents, a suspect hurled Molotov cocktails at a Tesla dealership, igniting small fires.",
-        "newsLinks": [{"title": "CBS News", "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"}],
+        "newsLinks": [],
         "additionalSources": "DOJ (Colorado)"
     },
     {
@@ -76,7 +76,7 @@
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
         "description": "Molotov cocktails thrown at Tesla dealership.",
-        "newsLinks": [{"title": "AP News", "url": "https://example.com"}],
+        "newsLinks": [],
         "additionalSources": "-"
     },
     {
@@ -84,7 +84,7 @@
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
         "description": "Attempted arson: Incendiary devices targeting Tesla dealership.",
-        "newsLinks": [{"title": "AP News", "url": "https://example.com"}],
+        "newsLinks": [],
         "additionalSources": "-"
     },
     {
@@ -92,7 +92,7 @@
         "location": "Littleton, MA",
         "type": "Arson & Explosions",
         "description": "Charging stations torched: Seven Tesla Supercharger stalls at a shopping center outside Boston were set on fire overnight.",
-        "newsLinks": [{"title": "Economic Times", "url": "https://m.economictimes.com/news/international/us/tesla-under-siege-after-nationwide-attacks-on-showrooms-heres-what-police-are-investigation-after-trumps-domestic-terrorists-charges/articleshow/118948255.cms"}],
+        "newsLinks": [],
         "additionalSources": "NY Times"
     },
     {
@@ -100,7 +100,7 @@
         "location": "North Charleston, SC",
         "type": "Arson & Explosions",
         "description": "Molotov attack & arrest: A 24-year-old man threw incendiary devices at a Tesla charging station and accidentally set himself on fire.",
-        "newsLinks": [{"title": "CSIS", "url": "https://www.csis.org/analysis/escalating-attacks-tesla-facilities"}],
+        "newsLinks": [],
         "additionalSources": "DOJ (S.C.) Press Release"
     },
     {
@@ -108,7 +108,7 @@
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
         "description": "Copycat fire: A month after the original Loveland attacks, an arson fire was reported at the same Tesla center.",
-        "newsLinks": [{"title": "CBS News", "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"}],
+        "newsLinks": [],
         "additionalSources": "-"
     },
     {
@@ -116,7 +116,7 @@
         "location": "Portland, OR",
         "type": "Arson & Explosions",
         "description": "Fire caused by incendiary devices at Tesla dealership, vehicles/building damaged.",
-        "newsLinks": [{"title": "AP News", "url": "https://example.com"}],
+        "newsLinks": [],
         "additionalSources": "AP News"
     },
     {
@@ -124,7 +124,7 @@
         "location": "Seattle, WA",
         "type": "Arson & Explosions",
         "description": "Mysterious lot fire: A blaze destroyed four Tesla Cybertrucks parked at a Tesla lot in Seattle.",
-        "newsLinks": [{"title": "AP News", "url": "https://apnews.com/article/tesla-dealership-shooting-oregon-elon-musk-782907d226f22d5dc583d3abeefd34e2"}],
+        "newsLinks": [],
         "additionalSources": "KING5 News"
     },
     {
@@ -140,7 +140,7 @@
         "location": "Kansas City, MO",
         "type": "Arson & Explosions",
         "description": "Cybertrucks burned: Two Tesla Cybertrucks were found burned at a Kansas City Tesla dealership lot in a likely arson incident.",
-        "newsLinks": [{"title": "CSIS", "url": "https://www.csis.org/analysis/escalating-attacks-tesla-facilities"}],
+        "newsLinks": [],
         "additionalSources": "KMBC News"
     },
     {
@@ -148,7 +148,7 @@
         "location": "Salem, OR",
         "type": "Firearm Attacks",
         "description": "Shots fired at dealership: Around 3:00 AM, an assailant fired multiple rounds into a Tesla dealership’s building and at least one vehicle.",
-        "newsLinks": [{"title": "U.S. DOJ (Oregon)", "url": "https://www.justice.gov/usao-or/pr/salem-man-faces-federal-charge-illegally-possessing-molotov-cocktails"}],
+        "newsLinks": [],
         "additionalSources": "-"
     },
     {
@@ -196,7 +196,7 @@
         "location": "New York, NY",
         "type": "Protests & Organized Actions",
         "description": "Demonstration at Tesla dealership with nine arrests for disorderly conduct.",
-        "newsLinks": [{"title": "Business Insider", "url": "https://example.com"}],
+        "newsLinks": [],
         "additionalSources": "-"
     },
     {
@@ -204,7 +204,7 @@
         "location": "Manhattan, NY",
         "type": "Protests & Organized Actions",
         "description": "'Tesla Takedown' rally: Over 350 protesters gathered outside the Tesla showroom, occupying it and forcing a shutdown. NYPD arrested 6 people.",
-        "newsLinks": [{"title": "CBS News", "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"}],
+        "newsLinks": [],
         "additionalSources": "Guardian"
     },
     {
