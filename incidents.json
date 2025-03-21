@@ -138,8 +138,10 @@
         "type": "Firearm Attacks",
         "description": "Drive-by shooting (1st incident): At ~5 AM, 7–8 gunshots were fired into a Tesla showroom in Tigard, hitting three cars and shattering windows.",
         "newsLinks": [
-            {"title": "AP News", "url": "https://apnews.com/article/tesla-dealership-shooting-oregon-elon-musk-782907d226f22d5dc583d3abeefd34e2"},
-            {"title": "Statesman Journal", "url": "https://www.statesmanjournal.com/tesla-tigard-shooting-2025-03-06"}
+            {
+                "title": "Shots fired at Tesla dealership in Tigard, suspect arrested",
+                "url": "https://ktvz.com/news/crime-courts/2025/03/06/shots-fired-at-tesla-dealership-in-tigard-suspect-arrested/"
+            }
         ],
         "verified": true
     },
@@ -147,7 +149,7 @@
         "date": "2025-03-06",
         "location": "Brookline, MA",
         "type": "Graffiti & Symbolic Attacks",
-        "description": "Stickers on vehicles: A 39-year-old man placed stickers of Elon Musk’s face on several Teslas, calling it 'free speech.' He was charged with six counts of defacing property.",
+        "description": "Needs verification",
         "newsLinks": [],
         "verified": false
     },
@@ -157,7 +159,10 @@
         "type": "Physical Damage",
         "description": "Keying incident at Dallas-Fort Worth Airport: A Tesla’s cameras recorded a man keying the car’s paint in the parking lot around 4:15 PM. The owner filed a police report and posted the video online, which went viral (even retweeted by Donald Trump Jr.). Police are investigating, and the incident highlights growing anti-Tesla sentiment.",
         "newsLinks": [
-            {"title": "CBS News Texas", "url": "https://www.cbsnews.com/texas/news/viral-video-shows-man-keying-tesla-in-dallas-as-attacks-on-company-elon-musk-grow-nationwide/"}
+            {
+                "title": "Viral video shows man keying Tesla in Dallas as attacks on company, Elon Musk grow nationwide",
+                "url": "https://www.cbsnews.com/texas/news/viral-video-shows-man-keying-tesla-in-dallas-as-attacks-on-company-elon-musk-grow-nationwide/"
+            }
         ],
         "verified": true
     },
@@ -165,7 +170,7 @@
         "date": "2025-03-03",
         "location": "Littleton, MA",
         "type": "Arson & Explosions",
-        "description": "Charging stations torched: Seven Tesla Supercharger stalls at a shopping center outside Boston were set on fire overnight.",
+        "description": "Needs verification",
         "newsLinks": [],
         "verified": false
     },
@@ -173,7 +178,7 @@
         "date": "2025-03-03",
         "location": "Owings Mills, MD",
         "type": "Graffiti & Symbolic Attacks",
-        "description": "Anti-Musk graffiti: After a protest at a Tesla dealership, police found 'No Musk' scrawled with a swastika on the building.",
+        "description": "Needs verification",
         "newsLinks": [],
         "verified": false
     },
@@ -181,7 +186,7 @@
         "date": "2025-03-02",
         "location": "New York, NY",
         "type": "Protests & Organized Actions",
-        "description": "Demonstration at Tesla dealership with nine arrests for disorderly conduct.",
+        "description": "Needs verification",
         "newsLinks": [],
         "verified": false
     },
@@ -189,7 +194,7 @@
         "date": "2025-02-19",
         "location": "Salem, OR",
         "type": "Firearm Attacks",
-        "description": "Shots fired at dealership: Around 3:00 AM, an assailant fired multiple rounds into a Tesla dealership’s building and at least one vehicle.",
+        "description": "Needs verification",
         "newsLinks": [],
         "verified": false
     },
@@ -197,49 +202,103 @@
         "date": "2025-02-19",
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
-        "description": "Attempted arson: Incendiary devices targeting Tesla dealership.",
-        "newsLinks": [],
-        "verified": false
+        "description": "Attempted arson: Incendiary devices targeting Tesla dealership were found, part of a series of attacks.",
+        "newsLinks": [
+            {
+                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
+                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+            },
+            {
+                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
+                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+            }
+        ],
+        "verified": true
     },
     {
         "date": "2025-02-11",
         "location": "Loveland, CO",
         "type": "Graffiti & Symbolic Attacks",
-        "description": "Nazi spray-paint on 15 Tesla vehicles.",
-        "newsLinks": [],
-        "verified": false
+        "description": "Nazi spray-paint on 15 Tesla vehicles, part of a series of attacks.",
+        "newsLinks": [
+            {
+                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
+                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+            },
+            {
+                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
+                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+            }
+        ],
+        "verified": true
     },
     {
         "date": "2025-02-07",
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
-        "description": "Molotov cocktails thrown at Tesla dealership.",
-        "newsLinks": [],
-        "verified": false
+        "description": "Molotov cocktails thrown at Tesla dealership, part of a series of attacks.",
+        "newsLinks": [
+            {
+                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
+                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+            },
+            {
+                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
+                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+            }
+        ],
+        "verified": true
     },
     {
         "date": "2025-02-02",
         "location": "Loveland, CO",
         "type": "Graffiti & Symbolic Attacks",
-        "description": "Nazi spray-paint on Tesla dealership sign.",
-        "newsLinks": [],
-        "verified": false
+        "description": "Nazi spray-paint on Tesla dealership sign, part of a series of attacks.",
+        "newsLinks": [
+            {
+                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
+                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+            },
+            {
+                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
+                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+            }
+        ],
+        "verified": true
     },
     {
         "date": "2025-01-29",
         "location": "Loveland, CO",
         "type": "Graffiti & Symbolic Attacks",
         "description": "Serial graffiti attacks: A 42-year-old suspect vandalized a Tesla dealership multiple times. She spray-painted 'Nazi' under the entrance sign and on 15 vehicles. Lucy Grace Nelson was arrested in February and charged with malicious destruction of property.",
-        "newsLinks": [],
-        "verified": false
+        "newsLinks": [
+            {
+                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
+                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+            },
+            {
+                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
+                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+            }
+        ],
+        "verified": true
     },
     {
         "date": "2025-01-29",
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
-        "description": "Molotov cocktail attacks (series): Over five late-Jan to Feb incidents, a suspect hurled Molotov cocktails at a Tesla dealership, igniting small fires.",
-        "newsLinks": [],
-        "verified": false
+        "description": "Incendiary device found near a Cybertruck at a Tesla dealership, part of a series of attacks.",
+        "newsLinks": [
+            {
+                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
+                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+            },
+            {
+                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
+                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+            }
+        ],
+        "verified": true
     },
     {
         "date": "2024-12-31",
@@ -255,7 +314,10 @@
         "type": "Theft & Sabotage",
         "description": "Supercharger cables stolen: Thieves cut and stole 18 out of 19 charging cables at a Tesla Supercharger station in one night.",
         "newsLinks": [
-            {"title": "Teslarati", "url": "https://www.teslarati.com/tesla-superchargers-struck-us-ev-charging-cable-thefts/"}
+            {
+                "title": "Tesla Superchargers struck by U.S. EV charging cable thefts",
+                "url": "https://www.teslarati.com/tesla-superchargers-struck-us-ev-charging-cable-thefts/"
+            }
         ],
         "verified": true
     },
@@ -265,7 +327,10 @@
         "type": "Other Anti-Tesla Actions",
         "description": "'Rolling Coal' road harassment: A viral TeslaCam dashcam video showed a modified diesel pickup deliberately 'coal rolling' a Tesla twice on a highway.",
         "newsLinks": [
-            {"title": "Electrek", "url": "https://electrek.co/2021/07/08/tesla-coal-rolled-pickup-truck-dangerous-incident-caught-dashcam/"}
+            {
+                "title": "Tesla coal-rolled by pickup truck in dangerous incident caught on dashcam",
+                "url": "https://electrek.co/2021/07/08/tesla-coal-rolled-pickup-truck-dangerous-incident-caught-dashcam/"
+            }
         ],
         "verified": true
     },
@@ -275,7 +340,10 @@
         "type": "Theft & Sabotage",
         "description": "Charger blocking & pranks: A Dodge Ram pickup was parked in a Tesla charging spot with the Supercharger cable mockingly draped into its bed.",
         "newsLinks": [
-            {"title": "Business Insider", "url": "https://www.businessinsider.com/truck-owners-are-blocking-tesla-superchargers-in-ice-ing-protests-2018-12"}
+            {
+                "title": "Truck owners are blocking Tesla Superchargers in 'ICE-ing' protests",
+                "url": "https://www.businessinsider.com/truck-owners-are-blocking-tesla-superchargers-in-ice-ing-protests-2018-12"
+            }
         ],
         "verified": true
     },
@@ -285,7 +353,10 @@
         "type": "Other Anti-Tesla Actions",
         "description": "Charger blocking & pranks: A Dodge Ram pickup was parked in a Tesla charging spot with the Supercharger cable mockingly draped into its bed (also listed under Theft & Sabotage).",
         "newsLinks": [
-            {"title": "Business Insider", "url": "https://www.businessinsider.com/truck-owners-are-blocking-tesla-superchargers-in-ice-ing-protests-2018-12"}
+            {
+                "title": "Truck owners are blocking Tesla Superchargers in 'ICE-ing' protests",
+                "url": "https://www.businessinsider.com/truck-owners-are-blocking-tesla-superchargers-in ice-ing-protests-2018-12"
+            }
         ],
         "verified": true
     },
@@ -295,7 +366,10 @@
         "type": "Theft & Sabotage",
         "description": "ICE-ing protest: Pickup truck owners deliberately blocked access to Tesla Supercharger stalls, shouting 'F*** Tesla!' while preventing Tesla drivers from charging.",
         "newsLinks": [
-            {"title": "Business Insider", "url": "https://www.businessinsider.com/truck-owners-are-blocking-tesla-superchargers-in-ice-ing-protests-2018-12"}
+            {
+                "title": "Truck owners are blocking Tesla Superchargers in 'ICE-ing' protests",
+                "url": "https://www.businessinsider.com/truck-owners-are-blocking-tesla-superchargers-in ice-ing-protests-2018-12"
+            }
         ],
         "verified": true
     }
