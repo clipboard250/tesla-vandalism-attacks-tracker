@@ -39,26 +39,49 @@ function formatDate(dateString) {
     }
 }
 
-// Extract news source name from the title
-function extractSourceName(title) {
-    // List of known news sources
-    const knownSources = [
-        'CNN', 'CBS News', 'ABC News', 'Forbes', 'The Guardian', 'AP News', 'Teslarati', 'Electrek',
-        'Business Insider', 'The Washington Post', 'NBC News', 'The New York Times', 'USA Today',
-        'Firstpost', 'LiveNOW from FOX', 'CSIS', 'NPR', 'LA Times', 'El País', 'Statesman Journal',
-        'Kansas City Star', 'KSHB', 'KTVZ', 'DOJ SC', 'DOJ Colorado', 'Boston.com'
-    ];
-    // Convert title to lowercase for case-insensitive matching
-    const titleLower = title.toLowerCase();
-    // Search for each known source in the title
-    for (const source of knownSources) {
-        if (titleLower.includes(source.toLowerCase())) {
-            return source; // Return the matching source name
+// Extract news source name from the URL
+function extractSourceName(url) {
+    // Mapping of domain names to source names
+    const sourceMap = {
+        'cnn.com': 'CNN',
+        'cbsnews.com': 'CBS News',
+        'abcnews.go.com': 'ABC News',
+        'forbes.com': 'Forbes',
+        'theguardian.com': 'The Guardian',
+        'apnews.com': 'AP News',
+        'teslarati.com': 'Teslarati',
+        'electrek.co': 'Electrek',
+        'businessinsider.com': 'Business Insider',
+        'washingtonpost.com': 'The Washington Post',
+        'nbcnews.com': 'NBC News',
+        'nytimes.com': 'The New York Times',
+        'usatoday.com': 'USA Today',
+        'firstpost.com': 'Firstpost',
+        'livenowfox.com': 'LiveNOW from FOX',
+        'csis.org': 'CSIS',
+        'npr.org': 'NPR',
+        'latimes.com': 'LA Times',
+        'elpais.com': 'El País',
+        'statesmanjournal.com': 'Statesman Journal',
+        'kansascity.com': 'Kansas City Star',
+        'kshb.com': 'KSHB',
+        'ktvz.com': 'KTVZ',
+        'justice.gov': 'DOJ',
+        'boston.com': 'Boston.com'
+    };
+    // Extract the domain from the URL
+    const domainMatch = url.match(/^(?:https?:\/\/)?(?:www\.)?([^\/]+)/i);
+    if (domainMatch) {
+        const domain = domainMatch[1].toLowerCase();
+        // Match the domain to a source name
+        for (const [key, value] of Object.entries(sourceMap)) {
+            if (domain.includes(key)) {
+                return value;
+            }
         }
     }
-    // Fallback: If no known source is found, return the first word as a last resort
-    const words = title.split(' ');
-    return words[0];
+    // Fallback: If no known source is found, return the domain name
+    return domainMatch ? domainMatch[1] : 'Unknown Source';
 }
 
 // Display incidents as cards
@@ -73,7 +96,7 @@ function displayIncidents(incidents) {
             <p class="font-montserrat"><strong>Location:</strong> ${incident.location}</p>
             <p class="font-montserrat">${incident.description}</p>
             <p class="font-montserrat"><strong>News Links:</strong> ${incident.newsLinks.map(link => {
-                const sourceName = extractSourceName(link.title);
+                const sourceName = extractSourceName(link.url); // Use URL to extract source name
                 return `<a href="${link.url}" target="_blank" class="text-red-500 hover:underline">${sourceName}</a>`;
             }).join(', ')}</p>
         `;
@@ -139,7 +162,7 @@ function filterAndSort() {
 function convertToCSV(incidents) {
     const headers = ['Date', 'Location', 'Type', 'Description', 'News Links', 'Verified'];
     const rows = incidents.map(incident => {
-        const newsLinks = incident.newsLinks.map(link => `${extractSourceName(link.title)}: ${link.url}`).join('; ');
+        const newsLinks = incident.newsLinks.map(link => `${extractSourceName(link.url)}: ${link.url}`).join('; ');
         return [
             formatDate(incident.date),
             incident.location,
@@ -186,7 +209,7 @@ function exportToPDF(incidents, filename) {
             doc.text('News Links:', 10, yPos);
             yPos += 7;
             incident.newsLinks.forEach(link => {
-                const sourceName = extractSourceName(link.title);
+                const sourceName = extractSourceName(link.url);
                 doc.text(`${sourceName}: ${link.url}`, 10, yPos, { maxWidth: 180 });
                 yPos += 7;
             });
