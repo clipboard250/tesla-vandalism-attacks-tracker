@@ -1,4 +1,4 @@
-k:root {
+:root {
     --bg-color: #1a1a1a; /* Dark mode background */
     --text-color: #d1d5db; /* Light gray body text */
     --header-color: #ffffff; /* White headers */
@@ -70,7 +70,7 @@ header {
 
 /* Ticker */
 #ticker {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color) !important; /* Ensure orange color in Dark Mode */
     color: var(--ticker-text);
     padding: 10px 0;
     overflow: hidden;
