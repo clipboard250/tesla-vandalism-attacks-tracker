@@ -7,7 +7,7 @@ fetch('incidents.json')
         return response.json();
     })
     .then(data => {
-        window.incidents = data; // Store incidents globally
+        window.incidents = data; // Store incidents globally (already sorted newest to oldest in incidents.json)
         displayIncidents(data); // Initial display
         updateTicker(data); // Update the latest incident ticker
     })
@@ -51,11 +51,7 @@ function displayIncidents(incidents) {
 
 // Update the latest incident ticker
 function updateTicker(incidents) {
-    const latestIncident = incidents.sort((a, b) => {
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
-        return dateB - dateA; // Sort newest to oldest for ticker
-    })[0];
+    const latestIncident = incidents[0]; // Already sorted newest to oldest in incidents.json
     const ticker = document.getElementById('ticker');
     ticker.innerHTML = `Latest Incident: ${formatDate(latestIncident.date)} - ${latestIncident.location} - ${latestIncident.type} - ${latestIncident.description}`;
 }
@@ -72,21 +68,24 @@ function filterAndSort() {
     // Filter by type
     if (typeFilter !== 'all') {
         filteredIncidents = filteredIncidents.filter(incident => incident.type === typeFilter);
+        // Sort by date only if a specific type is selected
+        filteredIncidents.sort((a, b) => {
+            const dateA = new Date(a.date + 'T00:00:00Z'); // Ensure consistent timezone (UTC)
+            const dateB = new Date(b.date + 'T00:00:00Z');
+            return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
+        });
+    } else {
+        // For "All Types", preserve the initial order from incidents.json unless the user changes the sort order
+        if (sortOrder !== 'newest') {
+            filteredIncidents.sort((a, b) => {
+                const dateA = new Date(a.date + 'T00:00:00Z');
+                const dateB = new Date(b.date + 'T00:00:00Z');
+                return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
+            });
+        }
     }
 
-    // Sort by date with robust parsing
-    filteredIncidents.sort((a, b) => {
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
-        if (isNaN(dateA) || isNaN(dateB)) {
-            console.error(`Invalid date detected: ${a.date} or ${b.date}`);
-            return 0; // Fallback to no change in order if dates are invalid
-        }
-        console.log(`Comparing ${a.date} (${dateA.toISOString()}) vs ${b.date} (${dateB.toISOString()})`);
-        return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
-    });
-
-    // Log the sorted incidents
+    // Log the sorted incidents for debugging
     console.log('Sorted incidents:', filteredIncidents.map(incident => `${incident.date} - ${incident.type}`));
 
     displayIncidents(filteredIncidents);
