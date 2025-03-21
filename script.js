@@ -51,7 +51,11 @@ function displayIncidents(incidents) {
 
 // Update the latest incident ticker
 function updateTicker(incidents) {
-    const latestIncident = incidents.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+    const latestIncident = incidents.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateB - dateA; // Sort newest to oldest for ticker
+    })[0];
     const ticker = document.getElementById('ticker');
     ticker.innerHTML = `Latest Incident: ${formatDate(latestIncident.date)} - ${latestIncident.location} - ${latestIncident.type} - ${latestIncident.description}`;
 }
@@ -70,16 +74,20 @@ function filterAndSort() {
         filteredIncidents = filteredIncidents.filter(incident => incident.type === typeFilter);
     }
 
-    // Sort by date with debugging
+    // Sort by date with robust parsing
     filteredIncidents.sort((a, b) => {
         const dateA = new Date(a.date);
         const dateB = new Date(b.date);
-        console.log(`Sorting: ${a.date} (${dateA}) vs ${b.date} (${dateB})`); // Debugging
+        if (isNaN(dateA) || isNaN(dateB)) {
+            console.error(`Invalid date detected: ${a.date} or ${b.date}`);
+            return 0; // Fallback to no change in order if dates are invalid
+        }
+        console.log(`Comparing ${a.date} (${dateA.toISOString()}) vs ${b.date} (${dateB.toISOString()})`);
         return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
     });
 
     // Log the sorted incidents
-    console.log('Sorted incidents:', filteredIncidents.map(incident => incident.date));
+    console.log('Sorted incidents:', filteredIncidents.map(incident => `${incident.date} - ${incident.type}`));
 
     displayIncidents(filteredIncidents);
     window.currentFilteredIncidents = filteredIncidents; // Store filtered incidents for export
