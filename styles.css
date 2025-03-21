@@ -4,6 +4,7 @@
     --header-color: #ffffff; /* White headers */
     --accent-color: #e82127; /* Tesla Red for buttons, ticker */
     --card-bg: #2d2d2d; /* Slightly lighter gray for cards */
+    --label-color: #ff9999; /* Lighter red for labels to stand out */
 }
 
 [data-theme="light"] {
@@ -12,6 +13,7 @@
     --header-color: #000000; /* Black headers */
     --accent-color: #e82127; /* Tesla Red remains the same */
     --card-bg: #ffffff; /* White for cards */
+    --label-color: #b91c1c; /* Darker red for labels in light mode */
 }
 
 /* Font families */
@@ -31,11 +33,26 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    margin: 0; /* Remove default margin for better layout */
 }
 
 h1, h2, h3 {
     color: var(--header-color);
     font-family: 'Archivo Black', sans-serif;
+}
+
+/* Ensure all text inherits the correct color */
+p, div, span, a {
+    color: var(--text-color);
+}
+
+/* Hyperlinks */
+a {
+    color: var(--accent-color);
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Header */
@@ -53,6 +70,11 @@ header {
     color: #ffffff;
 }
 
+/* Chart */
+#incident-chart {
+    max-width: 600px; /* Ensure chart doesn’t stretch too wide */
+}
+
 /* Cards */
 .incident-card {
     background-color: var(--card-bg);
@@ -60,10 +82,27 @@ header {
     padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    margin-bottom: 16px; /* Add spacing between cards */
 }
 
 .incident-card:hover {
     transform: translateY(-4px);
+}
+
+/* Card content */
+.incident-card h3 {
+    font-size: 1.25rem; /* Larger title */
+    font-weight: bold; /* Bolder title */
+    margin-bottom: 8px; /* Space below title */
+}
+
+.incident-card p {
+    margin: 4px 0; /* Space between paragraphs */
+}
+
+.incident-card strong {
+    color: var(--label-color); /* Different color for labels */
+    font-weight: 600; /* Slightly bolder labels */
 }
 
 /* Buttons */
