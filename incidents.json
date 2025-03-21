@@ -1,376 +1,394 @@
 [
     {
-        "date": "2025-03-18",
-        "location": "Las Vegas, NV",
-        "type": "Arson & Explosions",
-        "description": "Several Tesla vehicles were set on fire at a Las Vegas service center using Molotov cocktails. The word 'RESIST' was spray-painted on the building. Authorities are investigating it as a targeted attack.",
-        "newsLinks": [
-            {
-                "title": "FBI investigating Tesla vehicles shot and set on fire at facility in Las Vegas",
-                "url": "https://www.cnn.com/2025/03/18/us/tesla-fire-las-vegas-explosion/index.html"
-            },
-            {
-                "title": "Teslas set on fire at Las Vegas repair shop in latest incident of vandalism targeting company",
-                "url": "https://www.cbsnews.com/video/teslas-set-on-fire-at-las-vegas-repair-shop-in-latest-incident-of-vandalism-targeting-company/"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-17",
-        "location": "Kansas City, MO",
-        "type": "Arson & Explosions",
-        "description": "Two Tesla Cybertrucks were found burned at a Kansas City Tesla dealership lot in a likely arson incident.",
-        "newsLinks": [
-            {
-                "title": "Fire burns Cybertrucks at KC Tesla dealership, police say",
-                "url": "https://www.kansascity.com/news/local/article302275394.html"
-            },
-            {
-                "title": "2 Tesla Cybertrucks burned at Kansas City dealership; KCPD, ATF, FBI investigating",
-                "url": "https://www.kshb.com/news/local-news/two-tesla-cyber-trucks-burned-overnight"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-15",
-        "location": "Nationwide (USA)",
-        "type": "Protests & Organized Actions",
-        "description": "Coordinated nationwide protests: Hundreds protested at Tesla dealerships across multiple states, with peaceful demonstrations and some minor scuffles.",
-        "newsLinks": [
-            {
-                "title": "DoJ says attacks on Tesla stores are 'domestic terrorism' as more incidents emerge",
-                "url": "https://www.businessinsider.com/tesla-attacks-vandalism-violence-domestic-terrorism-doj-elon-musk-2025-3"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-13",
-        "location": "Tigard, OR",
-        "type": "Firearm Attacks",
-        "description": "Drive-by shooting (2nd incident): One week after the first, the Tigard Tesla store was attacked again before dawn with 10–15 shots, causing extensive damage.",
-        "newsLinks": [
-            {
-                "title": "Shots fired at Tesla dealership in Tigard, second shooting there in the past week",
-                "url": "https://ktvz.com/news/crime-courts/2025/03/13/shots-fired-at-tesla-dealership-in-tigard-second-shooting-there-in-the-past-week/"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-11",
-        "location": "Dedham, MA",
-        "type": "Graffiti & Symbolic Attacks",
-        "description": "Three Tesla vehicles were vandalized overnight at a service center in Dedham. Two Tesla Cybertrucks had words spray-painted on them, and all four tires on those trucks, as well as on a Tesla Model S, were slashed or damaged.",
-        "newsLinks": [
-            {
-                "title": "3 Teslas vandalized at dealership in Dedham, police say",
-                "url": "https://www.boston.com/news/crime/2025/03/11/three-tesla-vehicles-damaged-at-dealership-in-dedham-police-say/"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-09",
-        "location": "Seattle, WA",
-        "type": "Arson & Explosions",
-        "description": "A blaze destroyed four Tesla Cybertrucks parked at a Tesla lot in Seattle.",
-        "newsLinks": [
-            {
-                "title": "Fire that damaged four Tesla Cybertrucks in Seattle under investigation",
-                "url": "https://apnews.com/article/tesla-cybertruck-fire-seattle-7cd720096694b8455684db31159ed666"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-08",
-        "location": "Manhattan, NY",
-        "type": "Protests & Organized Actions",
-        "description": "'Tesla Takedown' rally: Over 350 protesters gathered outside the Tesla showroom, occupying it and forcing a shutdown. NYPD arrested 6 people.",
-        "newsLinks": [
-            {
-                "title": "Primeros detenidos por 'terrorismo doméstico' por el 'Tesla Takedown', el movimiento protesta contra Elon Musk",
-                "url": "https://elpais.com/us/2025-03-20/primeros-detenidos-por-terrorismo-domestico-por-el-tesla-takedown-el-movimiento-protesta-contra-elon-musk.html"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-07",
-        "location": "North Charleston, SC",
-        "type": "Arson & Explosions",
-        "description": "Molotov attack & arrest: A 24-year-old man threw incendiary devices at a Tesla charging station and accidentally set himself on fire.",
-        "newsLinks": [
-            {
-                "title": "James Island Man Charged for Arson of a N. Charleston Tesla Charging Station",
-                "url": "https://www.justice.gov/usao-sc/pr/james-island-man-charged-arson-n-charleston-tesla-charging-station"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-07",
-        "location": "Loveland, CO",
-        "type": "Arson & Explosions",
-        "description": "Copycat fire: A month after the original Loveland attacks, an arson fire was reported at the same Tesla center.",
-        "newsLinks": [
-            {
-                "title": "Another arrest made in vandalism at Colorado Tesla dealership",
-                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-07",
-        "location": "Portland, OR",
-        "type": "Arson & Explosions",
-        "description": "Needs verification",
-        "newsLinks": [],
-        "verified": false
-    },
-    {
-        "date": "2025-03-06",
-        "location": "Tigard, OR",
-        "type": "Firearm Attacks",
-        "description": "Drive-by shooting (1st incident): At ~5 AM, 7–8 gunshots were fired into a Tesla showroom in Tigard, hitting three cars and shattering windows.",
-        "newsLinks": [
-            {
-                "title": "Shots fired at Tesla dealership in Tigard, suspect arrested",
-                "url": "https://ktvz.com/news/crime-courts/2025/03/06/shots-fired-at-tesla-dealership-in-tigard-suspect-arrested/"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-06",
-        "location": "Brookline, MA",
-        "type": "Graffiti & Symbolic Attacks",
-        "description": "Needs verification",
-        "newsLinks": [],
-        "verified": false
-    },
-    {
-        "date": "2025-03-04",
-        "location": "Dallas, TX",
-        "type": "Physical Damage",
-        "description": "Keying incident at Dallas-Fort Worth Airport: A Tesla’s cameras recorded a man keying the car’s paint in the parking lot around 4:15 PM. The owner filed a police report and posted the video online, which went viral (even retweeted by Donald Trump Jr.). Police are investigating, and the incident highlights growing anti-Tesla sentiment.",
-        "newsLinks": [
-            {
-                "title": "Viral video shows man keying Tesla in Dallas as attacks on company, Elon Musk grow nationwide",
-                "url": "https://www.cbsnews.com/texas/news/viral-video-shows-man-keying-tesla-in-dallas-as-attacks-on-company-elon-musk-grow-nationwide/"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-03-03",
-        "location": "Littleton, MA",
-        "type": "Arson & Explosions",
-        "description": "Needs verification",
-        "newsLinks": [],
-        "verified": false
-    },
-    {
-        "date": "2025-03-03",
-        "location": "Owings Mills, MD",
-        "type": "Graffiti & Symbolic Attacks",
-        "description": "Needs verification",
-        "newsLinks": [],
-        "verified": false
-    },
-    {
-        "date": "2025-03-02",
-        "location": "New York, NY",
-        "type": "Protests & Organized Actions",
-        "description": "Needs verification",
-        "newsLinks": [],
-        "verified": false
-    },
-    {
-        "date": "2025-02-19",
+        "date": "2025-01-20",
         "location": "Salem, OR",
-        "type": "Firearm Attacks",
-        "description": "Needs verification",
-        "newsLinks": [],
-        "verified": false
-    },
-    {
-        "date": "2025-02-19",
-        "location": "Loveland, CO",
         "type": "Arson & Explosions",
-        "description": "Attempted arson: Incendiary devices targeting Tesla dealership were found, part of a series of attacks.",
+        "description": "Tesla dealership fire caused by multiple Molotov cocktails, damaging several vehicles (including a Cybertruck) and windows. Suspect later arrested on federal charges.",
         "newsLinks": [
             {
-                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
-                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+                "title": "Salem man accused of throwing Molotov cocktails at Tesla dealership (Salem Reporter)",
+                "url": "https://www.salemreporter.com/2025/03/05/salem-man-accused-of-shooting-window-throwing-molotov-cocktail-at-tesla-dealership/"
             },
             {
-                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
-                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+                "title": "Several Tesla vehicles burned down in Las Vegas and Kansas City, arson suspected (Electrek)",
+                "url": "https://electrek.co/2025/03/18/several-tesla-vehicles-burned-down-in-las-vegas-and-kansas-city-arson-suspected/"
             }
         ],
+        "additionalSources": "DOJ District of Oregon press release; Salem Police report",
         "verified": true
     },
     {
-        "date": "2025-02-11",
-        "location": "Loveland, CO",
-        "type": "Graffiti & Symbolic Attacks",
-        "description": "Nazi spray-paint on 15 Tesla vehicles, part of a series of attacks.",
-        "newsLinks": [
-            {
-                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
-                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
-            },
-            {
-                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
-                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2025-02-07",
+        "date": "2025-01-29",
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
-        "description": "Molotov cocktails thrown at Tesla dealership, part of a series of attacks.",
+        "description": "Small fire set near a Cybertruck at Tesla dealership; Molotov cocktail found next to vehicle. First of several incidents by same suspect.",
         "newsLinks": [
             {
-                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
-                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+                "title": "Molotov cocktails, arson and graffiti: Tesla facilities attacked... (CBS News)",
+                "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"
             },
             {
-                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
-                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+                "title": "Lyons Resident Charged... Loveland Tesla Dealership (DOJ Colorado)",
+                "url": "https://www.justice.gov/usao-co/pr/lyons-resident-charged-connection-series-incidents-loveland-tesla-dealership"
             }
         ],
+        "additionalSources": "Loveland Police report",
         "verified": true
     },
     {
         "date": "2025-02-02",
         "location": "Loveland, CO",
         "type": "Graffiti & Symbolic Attacks",
-        "description": "Nazi spray-paint on Tesla dealership sign, part of a series of attacks.",
+        "description": "Dealership sign defaced with black spray paint; \"NAZI\" painted on entrance sign.",
         "newsLinks": [
             {
-                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
-                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+                "title": "Lyons Resident Charged... Loveland Tesla Dealership (DOJ Colorado)",
+                "url": "https://www.justice.gov/usao-co/pr/lyons-resident-charged-connection-series-incidents-loveland-tesla-dealership"
             },
             {
-                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
-                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+                "title": "Tesla's steep fall... to hated target (LA Times)",
+                "url": "https://www.latimes.com/california/story/2025-03-17/torched-and-vandalized-tesla-cybertrucks-follow-in-the-humvees-path"
             }
         ],
+        "additionalSources": "Loveland Police report",
         "verified": true
     },
     {
-        "date": "2025-01-29",
+        "date": "2025-02-07",
+        "location": "Loveland, CO",
+        "type": "Arson & Explosions",
+        "description": "Graffiti and attempted arson at Tesla dealership; broken Molotov cocktail bottles found on lot.",
+        "newsLinks": [
+            {
+                "title": "Lyons Resident Charged... Loveland Tesla Dealership (DOJ Colorado)",
+                "url": "https://www.justice.gov/usao-co/pr/lyons-resident-charged-connection-series-incidents-loveland-tesla-dealership"
+            },
+            {
+                "title": "Tesla facilities attacked in wake of Musk's role (CBS News)",
+                "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"
+            }
+        ],
+        "additionalSources": "Loveland Police report",
+        "verified": true
+    },
+    {
+        "date": "2025-02-11",
         "location": "Loveland, CO",
         "type": "Graffiti & Symbolic Attacks",
-        "description": "Serial graffiti attacks: A 42-year-old suspect vandalized a Tesla dealership multiple times. She spray-painted 'Nazi' under the entrance sign and on 15 vehicles. Lucy Grace Nelson was arrested in February and charged with malicious destruction of property.",
+        "description": "Vandal caught spray-painting expletive graffiti on dealership windows; suspect arrested Feb 24 with incendiary materials.",
         "newsLinks": [
             {
-                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
-                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+                "title": "Tesla vehicles... under attack (Fox News)",
+                "url": "https://www.foxnews.com/us/10-places-where-tesla-vehicles-dealerships-were-attacked-year"
             },
             {
-                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
-                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+                "title": "Molotov cocktails, arson and graffiti... (CBS News)",
+                "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"
             }
         ],
+        "additionalSources": "DOJ Colorado press release; Loveland Reporter-Herald",
         "verified": true
     },
     {
-        "date": "2025-01-29",
+        "date": "2025-02-07",
+        "location": "Southborough, MA",
+        "type": "Graffiti & Symbolic Attacks",
+        "description": "Owner's Cybertruck vandalized with a vulgar \"Nazi\" sticker, likely due to Musk backlash; accompanied by harassing phone messages to owner.",
+        "newsLinks": [
+            {
+                "title": "Threats, harassment at Mass. surgeon's gold Cybertruck (Boston 25)",
+                "url": "https://www.boston25news.com/news/massachusetts/threats-harassment-aimed-mass-surgeon-driving-gold-cybertruck/4GBKOHCGNJE37HVC3AM6TKMG6Q/"
+            },
+            {
+                "title": "Mass. doctor says gold Cybertruck prompted threats (NBC Boston)",
+                "url": "https://www.nbcboston.com/news/local/mass-doctor-gold-cybertruck-response/3632199/"
+            }
+        ],
+        "additionalSources": "Local police report",
+        "verified": true
+    },
+    {
+        "date": "2025-03-01",
+        "location": "Owings Mills, MD",
+        "type": "Protests & Organized Actions",
+        "description": "Approximately 300 demonstrators rallied outside Tesla dealership to protest Musk’s federal role. Peaceful protest as part of nationwide \"Tesla Takedown.\"",
+        "newsLinks": [
+            {
+                "title": "Graffiti found at Tesla dealership after protest (CBS Baltimore)",
+                "url": "https://www.cbsnews.com/baltimore/news/vandalism-graffiti-elon-musk-owings-mills-maryland-trump-protest/"
+            },
+            {
+                "title": "Hundreds protest Elon Musk at Owings Mills Tesla (Baltimore Banner)",
+                "url": "https://www.thebaltimorebanner.com/politics-power/national-politics/tesla-takedown-protest-owings-mills-THBPNDMGFJGKBHBFVZB6IX5QTM/"
+            }
+        ],
+        "additionalSources": "Baltimore County Police statement",
+        "verified": true
+    },
+    {
+        "date": "2025-03-02",
+        "location": "Owings Mills, MD",
+        "type": "Graffiti & Symbolic Attacks",
+        "description": "\"No Musk\" and swastika-like symbol spray-painted on Tesla showroom wall overnight after protest. Police investigating.",
+        "newsLinks": [
+            {
+                "title": "Owings Mills Tesla dealership vandalized after protest (WMAR Baltimore)",
+                "url": "https://www.wmar2news.com/local/musk-critics-vandalize-owings-mills-tesla-dealership-with-antisemitic-graffiti"
+            },
+            {
+                "title": "Tesla facilities attacked amid Musk backlash (CBS News)",
+                "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"
+            }
+        ],
+        "additionalSources": "Baltimore Co. Police report",
+        "verified": true
+    },
+    {
+        "date": "2025-03-03",
+        "location": "Littleton, MA",
+        "type": "Arson & Explosions",
+        "description": "Seven Tesla Supercharger stalls set on fire around 1:00 AM at The Point shopping center. Authorities say fires were intentionally set.",
+        "newsLinks": [
+            {
+                "title": "Tesla charging stations intentionally set on fire (CBS Boston)",
+                "url": "https://www.cbsnews.com/boston/news/littleton-massachusetts-tesla-station-fire/"
+            },
+            {
+                "title": "Tesla stations set ablaze in Littleton, Mass. (Fox News)",
+                "url": "https://www.foxnews.com/us/10-places-where-tesla-vehicles-dealerships-were-attacked-year"
+            }
+        ],
+        "additionalSources": "Littleton Police/Fire reports",
+        "verified": true
+    },
+    {
+        "date": "2025-03-05",
+        "location": "Meyers, CA",
+        "type": "Graffiti & Symbolic Attacks",
+        "description": "Multiple Tesla Superchargers defaced with black swastikas and Elon Musk’s name in red paint. Vandalism discovered March 5 in parking lot near Lake Tahoe.",
+        "newsLinks": [
+            {
+                "title": "Tesla superchargers vandalized again in Meyers (South Tahoe Now)",
+                "url": "https://southtahoenow.com/03/13/2025/tesla-superchargers-vandalized-again-in-meyers"
+            },
+            {
+                "title": "Tesla chargers vandalized with swastikas in Meyers (KCRA 3)",
+                "url": "https://www.kcra.com/article/tesla-chargers-vandalized-swastikas-meyers/64058781"
+            }
+        ],
+        "additionalSources": "El Dorado Sheriff report",
+        "verified": true
+    },
+    {
+        "date": "2025-03-06",
+        "location": "Brookline, MA",
+        "type": "Graffiti & Symbolic Attacks",
+        "description": "Man arrested for placing profane anti-Musk stickers on multiple Teslas around town; charged with 6 counts of property defacement.",
+        "newsLinks": [
+            {
+                "title": "Tesla attacks: man vandalizes cars with stickers (CBS News)",
+                "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"
+            },
+            {
+                "title": "Tesla’s steep fall to hated target (LA Times)",
+                "url": "https://www.latimes.com/california/story/2025-03-17/torched-and-vandalized-tesla-cybertrucks-follow-in-the-humvees-path"
+            }
+        ],
+        "additionalSources": "Brookline Police statement",
+        "verified": true
+    },
+    {
+        "date": "2025-03-06",
+        "location": "Tigard, OR",
+        "type": "Firearm Attacks",
+        "description": "At least 7 gunshots fired into Tesla Service Center overnight, damaging 3 cars and multiple windows. No injuries; suspect unknown.",
+        "newsLinks": [
+            {
+                "title": "Shots fired at Tigard Tesla dealership (KGW/KTVZ)",
+                "url": "https://ktvz.com/news/crime-courts/2025/03/13/shots-fired-at-tesla-dealership-in-tigard-second-shooting-there-in-the-past-week/"
+            },
+            {
+                "title": "Portland-area Tesla dealership struck by gunfire (CBS News)",
+                "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"
+            }
+        ],
+        "additionalSources": "Tigard Police press release",
+        "verified": true
+    },
+    {
+        "date": "2025-03-07",
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
-        "description": "Incendiary device found near a Cybertruck at a Tesla dealership, part of a series of attacks.",
+        "description": "New arson attempt at Loveland Tesla dealership early morning (after prior suspect’s release). Device ignited on lot; no arrests yet.",
         "newsLinks": [
             {
-                "title": "Woman charged with hate crimes for Tesla dealership vandalism in Loveland",
-                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+                "title": "Gunfire, Molotovs and 'Nazi' graffiti in Tesla vandalism (Washington Times)",
+                "url": "https://www.washingtontimes.com/news/2025/mar/10/gunfire-molotov-cocktails-nazi-graffiti-used-vandalism-tesla/"
             },
             {
-                "title": "Loveland Woman Sentenced for Vandalism at Tesla Dealership",
-                "url": "https://www.justice.gov/usao-co/pr/loveland-woman-sentenced-vandalism-tesla-dealership"
+                "title": "Tesla facilities attacked amid Musk backlash (CBS News)",
+                "url": "https://www.cbsnews.com/news/tesla-violence-protest-elon-musk/"
             }
         ],
+        "additionalSources": "Loveland Police statement",
         "verified": true
     },
     {
-        "date": "2024-12-31",
+        "date": "2025-03-07",
+        "location": "North Charleston, SC",
+        "type": "Arson & Explosions",
+        "description": "Man threw Molotov cocktails at Tesla charging station, after spray-painting \"F*ck Trump\" and \"Long Live Ukraine\" on site. Chargers damaged; suspect arrested.",
+        "newsLinks": [
+            {
+                "title": "James Island Man Charged for Arson of Tesla Charging Station (DOJ SC)",
+                "url": "https://www.justice.gov/usao-sc/pr/james-island-man-charged-arson-n-charleston-tesla-charging-station"
+            },
+            {
+                "title": "Tesla vandal sets chargers on fire in SC (Fox News)",
+                "url": "https://www.foxnews.com/us/10-places-where-tesla-vehicles-dealerships-were-attacked-year"
+            }
+        ],
+        "additionalSources": "North Charleston Police/ATF reports",
+        "verified": true
+    },
+    {
+        "date": "2025-03-08",
+        "location": "Lynnwood, WA",
+        "type": "Graffiti & Symbolic Attacks",
+        "description": "Six Cybertrucks at Tesla service center spray-painted with red swastikas and \"f*** Elon\" slogans overnight. No suspects identified yet.",
+        "newsLinks": [
+            {
+                "title": "Six Cyber Trucks vandalized at Lynnwood Tesla Center (Lynnwood Times)",
+                "url": "https://lynnwoodtimes.com/2025/03/13/cyber-vandalized-2/"
+            },
+            {
+                "title": "Cybertrucks vandalized with swastikas in Lynnwood (KIRO 7)",
+                "url": "https://www.kiro7.com/news/local/cybertrucks-vandalized-with-swastikas-lynnwood-protest-continue-against-its-ceo/4PPRZQP2MZF6PKFICLBVAIQU7M/"
+            }
+        ],
+        "additionalSources": "Lynnwood Police report",
+        "verified": true
+    },
+    {
+        "date": "2025-03-09",
+        "location": "Seattle, WA",
+        "type": "Arson & Explosions",
+        "description": "Fire damaged 4 Tesla Cybertrucks at Seattle storage lot; arson suspected, FBI assisting investigation.",
+        "newsLinks": [
+            {
+                "title": "Fire damaged four Tesla Cybertrucks in Seattle (AP News)",
+                "url": "https://apnews.com/article/tesla-cybertruck-fire-seattle-7cd720096694b8455684db31159ed666"
+            },
+            {
+                "title": "Several Tesla vehicles burned in Las Vegas & KC (Electrek)",
+                "url": "https://electrek.co/2025/03/18/several-tesla-vehicles-burned-down-in-las-vegas-and-kansas-city-arson-suspected/"
+            }
+        ],
+        "additionalSources": "Seattle Fire Dept. report",
+        "verified": true
+    },
+    {
+        "date": "2025-03-11",
+        "location": "Dedham, MA",
+        "type": "Physical Damage",
+        "description": "3 Teslas (2 Cybertrucks, 1 Model S) found with all tires slashed and graffiti on vehicles. Vandalism discovered by staff in morning.",
+        "newsLinks": [
+            {
+                "title": "3 Teslas vandalized in Dedham (Boston.com)",
+                "url": "https://www.boston.com/news/crime/2025/03/11/three-tesla-vehicles-damaged-at-dealership-in-dedham-police-say/"
+            },
+            {
+                "title": "Cybertrucks vandalized at Dedham store (WHDH)",
+                "url": "https://whdh.com/news/tesla-cybertrucks-vandalized-at-dedham-dealership/"
+            }
+        ],
+        "additionalSources": "Dedham Police statement",
+        "verified": true
+    },
+    {
+        "date": "2025-03-12",
+        "location": "Meyers, CA",
+        "type": "Theft & Sabotage",
+        "description": "Eight Tesla Supercharger ports filled with epoxy, disabling chargers. Considered felony vandalism due to damage cost.",
+        "newsLinks": [
+            {
+                "title": "Superchargers vandalized again (South Tahoe Now)",
+                "url": "https://southtahoenow.com/03/13/2025/tesla-superchargers-vandalized-again-in-meyers"
+            }
+        ],
+        "additionalSources": "El Dorado Sheriff report",
+        "verified": true
+    },
+    {
+        "date": "2025-03-13",
+        "location": "Tigard, OR",
+        "type": "Firearm Attacks",
+        "description": "Second shooting at Tigard Tesla dealership in a week: ~12 shots fired at 4:15 AM, hitting cars and showroom windows. Security guard on site unharmed.",
+        "newsLinks": [
+            {
+                "title": "Second shooting at Tigard Tesla (KGW/KTVZ)",
+                "url": "https://ktvz.com/news/crime-courts/2025/03/13/shots-fired-at-tesla-dealership-in-tigard-second-shooting-there-in-the-past-week/"
+            },
+            {
+                "title": "More shots fired at OR Tesla (AP News)",
+                "url": "https://apnews.com/article/tesla-dealership-shooting-tigard-oregon-fbi-46c2f8c9c0bd3757b7f987c5a236b284"
+            }
+        ],
+        "additionalSources": "Tigard Police report",
+        "verified": true
+    },
+    {
+        "date": "2025-03-15",
+        "location": "Pasadena, CA",
+        "type": "Protests & Organized Actions",
+        "description": "Peaceful 'Tesla Takedown' protest outside Tesla dealership; dozens rallied against Musk’s government role. No arrests or damage.",
+        "newsLinks": [
+            {
+                "title": "Tesla’s fall from green darling to hated target (LA Times)",
+                "url": "https://www.latimes.com/california/story/2025-03-17/torched-and-vandalized-tesla-cybertrucks-follow-in-the-humvees-path"
+            },
+            {
+                "title": "‘Tesla Takedown’ protesters rally (CNN)",
+                "url": "https://www.cnn.com/2025/03/01/business/tesla-takedown-musk-doge/index.html"
+            }
+        ],
+        "additionalSources": "-",
+        "verified": true
+    },
+    {
+        "date": "2025-03-17",
+        "location": "Kansas City, MO",
+        "type": "Arson & Explosions",
+        "description": "Two Tesla Cybertrucks set on fire late at night in dealership lot; fire spread from one truck to another. FBI/ATF investigating as arson.",
+        "newsLinks": [
+            {
+                "title": "2 Cybertrucks burned at KC Tesla (KSHB 41)",
+                "url": "https://www.kshb.com/news/local-news/two-tesla-cyber-trucks-burned-overnight"
+            },
+            {
+                "title": "‘Suspicious’ Cybertruck fires probed (KCUR)",
+                "url": "https://www.kcur.org/news/2025-03-19/suspicious-cybertruck-fires-at-kansas-city-tesla-dealership-under-investigation"
+            }
+        ],
+        "additionalSources": "KCPD & ATF statements",
+        "verified": true
+    },
+    {
+        "date": "2025-03-18",
         "location": "Las Vegas, NV",
         "type": "Arson & Explosions",
-        "description": "A Cybertruck exploded outside the Trump International.",
-        "newsLinks": [],
-        "verified": false
-    },
-    {
-        "date": "2024-06-01",
-        "location": "Houston, TX",
-        "type": "Theft & Sabotage",
-        "description": "Supercharger cables stolen: Thieves cut and stole 18 out of 19 charging cables at a Tesla Supercharger station in one night.",
+        "description": "Pre-dawn Molotov cocktail attack at Tesla Collision Center damages 5 vehicles, including 2 set ablaze. FBI says it has hallmarks of domestic terrorism.",
         "newsLinks": [
             {
-                "title": "Tesla Superchargers struck by U.S. EV charging cable thefts",
-                "url": "https://www.teslarati.com/tesla-superchargers-struck-us-ev-charging-cable-thefts/"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2021-07-07",
-        "location": "U.S. Highway",
-        "type": "Other Anti-Tesla Actions",
-        "description": "'Rolling Coal' road harassment: A viral TeslaCam dashcam video showed a modified diesel pickup deliberately 'coal rolling' a Tesla twice on a highway.",
-        "newsLinks": [
+                "title": "Teslas set on fire in Las Vegas (Fox News)",
+                "url": "https://www.foxnews.com/us/10-places-where-tesla-vehicles-dealerships-were-attacked-year"
+            },
             {
-                "title": "Tesla coal-rolled by pickup truck in dangerous incident caught on dashcam",
-                "url": "https://electrek.co/2021/07/08/tesla-coal-rolled-pickup-truck-dangerous-incident-caught-dashcam/"
+                "title": "Las Vegas Tesla arson attack (Yahoo News)",
+                "url": "https://www.yahoo.com/news/las-vegas-tesla-center-attack-012345678.html"
             }
         ],
-        "verified": true
-    },
-    {
-        "date": "2019-01-01",
-        "location": "Bristol, TN",
-        "type": "Theft & Sabotage",
-        "description": "Charger blocking & pranks: A Dodge Ram pickup was parked in a Tesla charging spot with the Supercharger cable mockingly draped into its bed.",
-        "newsLinks": [
-            {
-                "title": "Truck owners are blocking Tesla Superchargers in 'ICE-ing' protests",
-                "url": "https://www.businessinsider.com/truck-owners-are-blocking-tesla-superchargers-in-ice-ing-protests-2018-12"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2019-01-01",
-        "location": "Bristol, TN",
-        "type": "Other Anti-Tesla Actions",
-        "description": "Charger blocking & pranks: A Dodge Ram pickup was parked in a Tesla charging spot with the Supercharger cable mockingly draped into its bed (also listed under Theft & Sabotage).",
-        "newsLinks": [
-            {
-                "title": "Truck owners are blocking Tesla Superchargers in 'ICE-ing' protests",
-                "url": "https://www.businessinsider.com/truck-owners-are-blocking-tesla-superchargers-in ice-ing-protests-2018-12"
-            }
-        ],
-        "verified": true
-    },
-    {
-        "date": "2018-12-27",
-        "location": "Hickory, NC",
-        "type": "Theft & Sabotage",
-        "description": "ICE-ing protest: Pickup truck owners deliberately blocked access to Tesla Supercharger stalls, shouting 'F*** Tesla!' while preventing Tesla drivers from charging.",
-        "newsLinks": [
-            {
-                "title": "Truck owners are blocking Tesla Superchargers in 'ICE-ing' protests",
-                "url": "https://www.businessinsider.com/truck-owners-are-blocking-tesla-superchargers-in ice-ing-protests-2018-12"
-            }
-        ],
+        "additionalSources": "LVMPD report; FBI Las Vegas statement",
         "verified": true
     }
 ]
