@@ -1,3 +1,7 @@
+// Project name and subheadline
+const projectName = "Tesla Incident Tracker";
+const projectSubheadline = "A public tool built by Tesla enthusiasts to help researchers and Tesla supporters stay informed.";
+
 // Load incidents from incidents.json
 fetch('incidents.json')
     .then(response => {
@@ -8,6 +12,8 @@ fetch('incidents.json')
     })
     .then(data => {
         window.incidents = data; // Store incidents globally (already sorted newest to oldest in incidents.json)
+        // Update the project title in the header
+        document.getElementById('project-title').textContent = projectName;
         displayIncidents(data); // Initial display
         updateTicker(data); // Update the latest incident ticker
     })
@@ -133,7 +139,7 @@ function filterAndSort() {
 function convertToCSV(incidents) {
     const headers = ['Date', 'Location', 'Type', 'Description', 'News Links', 'Verified'];
     const rows = incidents.map(incident => {
-        const newsLinks = incident.newsLinks.map(link => `${link.title}: ${link.url}`).join('; ');
+        const newsLinks = incident.newsLinks.map(link => `${extractSourceName(link.title)}: ${link.url}`).join('; ');
         return [
             formatDate(incident.date),
             incident.location,
@@ -144,6 +150,8 @@ function convertToCSV(incidents) {
         ];
     });
     return [
+        `# ${projectName}`,
+        `# ${projectSubheadline}`,
         headers.join(','),
         ...rows.map(row => row.join(','))
     ].join('\n');
@@ -156,7 +164,10 @@ function exportToPDF(incidents, filename) {
     let yPos = 20;
 
     doc.setFontSize(16);
-    doc.text('Tesla Vandalism and Attacks Tracker', 10, yPos);
+    doc.text(projectName, 10, yPos);
+    yPos += 10;
+    doc.setFontSize(10);
+    doc.text(projectSubheadline, 10, yPos);
     yPos += 10;
 
     doc.setFontSize(12);
@@ -194,7 +205,7 @@ document.getElementById('export-btn').addEventListener('click', () => {
     const filteredIncidents = window.currentFilteredIncidents || window.incidents;
     const typeFilter = document.getElementById('type-filter').value;
     const exportFormat = document.getElementById('export-format').value;
-    const baseFilename = typeFilter === 'all' ? 'tesla-vandalism-incidents-all' : `tesla-vandalism-incidents-${typeFilter.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`;
+    const baseFilename = typeFilter === 'all' ? 'tesla-incident-tracker-all' : `tesla-incident-tracker-${typeFilter.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`;
     let blob, filename;
 
     if (exportFormat === 'csv') {
