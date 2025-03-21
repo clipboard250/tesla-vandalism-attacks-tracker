@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesla Vandalism and Attacks Tracker</title>
+    <title>Tesla Incident Tracker</title>
     <!-- Google Fonts (Montserrat and Archivo) -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Archivo:wght@400;500&family=Archivo+Black&display=swap" rel="stylesheet">
     <!-- Tailwind CSS (for styling) -->
@@ -18,9 +18,23 @@
 </head>
 <body class="bg-gray-900 text-white font-archivo">
     <!-- Header -->
-    <header class="bg-gray-800 p-4 flex justify-between items-center">
-        <h1 class="text-2xl font-montserrat font-bold">Tesla Vandalism and Attacks Tracker</h1>
-        <button id="theme-toggle" class="bg-gray-700 px-3 py-1 rounded">Toggle Dark/Light Mode</button>
+    <header class="bg-gray-800 p-4 flex justify-between items-center relative">
+        <div>
+            <h1 class="text-2xl font-montserrat font-bold">Tesla Incident Tracker</h1>
+            <p class="text-lg font-montserrat">A public tool built by Tesla enthusiasts to help researchers and Tesla supporters stay informed.</p>
+        </div>
+        <div class="flex items-center space-x-2">
+            <!-- Submit a New Incident Button (Desktop) -->
+            <button id="submit-btn-top" class="bg-red-600 px-3 py-1 rounded font-montserrat hover:bg-red-700 md:block hidden">Submit a New Incident</button>
+            <!-- Dark/Light Mode Toggle -->
+            <button id="theme-toggle" class="bg-gray-700 px-3 py-1 rounded">Toggle Dark/Light Mode</button>
+            <!-- Hamburger Menu (Mobile) -->
+            <button id="hamburger-btn" class="md:hidden text-white text-2xl focus:outline-none">☰</button>
+        </div>
+        <!-- Dropdown Menu for Mobile -->
+        <div id="hamburger-menu" class="hidden absolute top-16 right-4 bg-gray-800 p-4 rounded shadow-lg md:hidden">
+            <button id="submit-btn-mobile" class="bg-red-600 px-3 py-1 rounded font-montserrat hover:bg-red-700 w-full text-left">Submit a New Incident</button>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -77,11 +91,16 @@
             <!-- Cards will be dynamically added by JavaScript -->
         </section>
 
-        <!-- Submit New Incident Button -->
+        <!-- Submit New Incident Button (Bottom) -->
         <section class="mt-8 text-center">
-            <button id="submit-btn" class="bg-red-600 px-4 py-2 rounded font-montserrat hover:bg-red-700">Submit a New Incident</button>
+            <button id="submit-btn-bottom" class="bg-red-600 px-4 py-2 rounded font-montserrat hover:bg-red-700">Submit a New Incident</button>
         </section>
     </main>
+
+    <!-- Footer with Copyright Notice -->
+    <footer class="bg-gray-800 p-4 text-center">
+        <p class="font-montserrat text-sm">© 2025 clipboard250. All rights reserved.</p>
+    </footer>
 
     <!-- Submission Modal (Hidden by Default) -->
     <div id="submit-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">

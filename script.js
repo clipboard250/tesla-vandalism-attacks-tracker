@@ -35,6 +35,28 @@ function formatDate(dateString) {
     }
 }
 
+// Extract news source name from the title
+function extractSourceName(title) {
+    // List of known news sources
+    const knownSources = [
+        'CNN', 'CBS News', 'ABC News', 'Forbes', 'The Guardian', 'AP News', 'Teslarati', 'Electrek',
+        'Business Insider', 'The Washington Post', 'NBC News', 'The New York Times', 'USA Today',
+        'Firstpost', 'LiveNOW from FOX', 'CSIS', 'NPR', 'LA Times', 'El País', 'Statesman Journal',
+        'Kansas City Star', 'KSHB', 'KTVZ', 'DOJ SC', 'DOJ Colorado', 'Boston.com'
+    ];
+    // Split the title into words
+    const words = title.split(' ');
+    // Check if the first word or a combination of words matches a known source
+    for (let i = 0; i < words.length; i++) {
+        const potentialSource = words.slice(0, i + 1).join(' ');
+        if (knownSources.includes(potentialSource)) {
+            return potentialSource;
+        }
+    }
+    // Fallback: Use the first word if no match is found
+    return words[0];
+}
+
 // Display incidents as cards
 function displayIncidents(incidents) {
     const incidentsContainer = document.getElementById('incidents');
@@ -46,7 +68,10 @@ function displayIncidents(incidents) {
             <h3 class="text-lg font-archivo-black">${formatDate(incident.date)} - ${incident.type}</h3>
             <p class="font-montserrat"><strong>Location:</strong> ${incident.location}</p>
             <p class="font-montserrat">${incident.description}</p>
-            <p class="font-montserrat"><strong>News Links:</strong> ${incident.newsLinks.map(link => `<a href="${link.url}" target="_blank" class="text-red-500 hover:underline">${link.title}</a>`).join(', ')}</p>
+            <p class="font-montserrat"><strong>News Links:</strong> ${incident.newsLinks.map(link => {
+                const sourceName = extractSourceName(link.title);
+                return `<a href="${link.url}" target="_blank" class="text-red-500 hover:underline">${sourceName}</a>`;
+            }).join(', ')}</p>
         `;
         if (!incident.verified) {
             html += `<p class="disclaimer">⚠️ *This incident has not yet been independently verified.*</p>`;
@@ -150,7 +175,8 @@ function exportToPDF(incidents, filename) {
             doc.text('News Links:', 10, yPos);
             yPos += 7;
             incident.newsLinks.forEach(link => {
-                doc.text(`${link.title}: ${link.url}`, 10, yPos, { maxWidth: 180 });
+                const sourceName = extractSourceName(link.title);
+                doc.text(`${sourceName}: ${link.url}`, 10, yPos, { maxWidth: 180 });
                 yPos += 7;
             });
         }
@@ -196,14 +222,34 @@ themeToggle.addEventListener('click', () => {
     themeToggle.textContent = currentTheme === 'light' ? 'Toggle Dark/Light Mode' : 'Toggle Dark/Light Mode';
 });
 
+// Hamburger menu toggle
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const hamburgerMenu = document.getElementById('hamburger-menu');
+hamburgerBtn.addEventListener('click', () => {
+    hamburgerMenu.classList.toggle('hidden');
+});
+
 // Submission modal
-const submitBtn = document.getElementById('submit-btn');
+const submitBtnTop = document.getElementById('submit-btn-top');
+const submitBtnMobile = document.getElementById('submit-btn-mobile');
+const submitBtnBottom = document.getElementById('submit-btn-bottom');
 const submitModal = document.getElementById('submit-modal');
 const closeModal = document.getElementById('close-modal');
 const submitViaEmail = document.getElementById('submit-via-email');
 const submitViaGitHub = document.getElementById('submit-via-github');
 
-submitBtn.addEventListener('click', () => {
+submitBtnTop.addEventListener('click', () => {
+    submitModal.classList.remove('hidden');
+});
+
+submitBtnMobile.addEventListener('click', () => {
+    submitModal.classList.remove('hidden');
+    hamburgerMenu.classList.add('hidden');
+    // Scroll to the bottom submit button
+    submitBtnBottom.scrollIntoView({ behavior: 'smooth' });
+});
+
+submitBtnBottom.addEventListener('click', () => {
     submitModal.classList.remove('hidden');
 });
 

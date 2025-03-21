@@ -2,18 +2,22 @@
     --bg-color: #1a1a1a; /* Dark mode background */
     --text-color: #d1d5db; /* Light gray body text */
     --header-color: #ffffff; /* White headers */
-    --accent-color: #e82127; /* Tesla Red for buttons, ticker */
+    --accent-color: #d97706; /* Dark orange for buttons, ticker */
     --card-bg: #2d2d2d; /* Slightly lighter gray for cards */
     --label-color: #ff9999; /* Lighter red for labels to stand out */
+    --ticker-text: #ffffff; /* White ticker text in Dark Mode */
+    --field-bg: #4b5563; /* Dark gray for form fields in Dark Mode */
 }
 
 [data-theme="light"] {
     --bg-color: #f5f5f5; /* Light mode background */
     --text-color: #374151; /* Dark gray body text */
     --header-color: #000000; /* Black headers */
-    --accent-color: #e82127; /* Tesla Red remains the same */
+    --accent-color: #d97706; /* Dark orange remains the same */
     --card-bg: #ffffff; /* White for cards */
     --label-color: #b91c1c; /* Darker red for labels in light mode */
+    --ticker-text: #1f2937; /* Dark gray ticker text in Light Mode for better contrast */
+    --field-bg: #e5e7eb; /* Light gray for form fields in Light Mode */
 }
 
 /* Font families */
@@ -67,7 +71,7 @@ header {
 /* Ticker */
 #ticker {
     background-color: var(--accent-color);
-    color: #ffffff;
+    color: var(--ticker-text);
     padding: 10px 0;
     overflow: hidden;
     white-space: nowrap;
@@ -137,6 +141,17 @@ button:hover {
     background-color: #c91b22; /* Slightly darker Tesla Red */
 }
 
+/* Form fields (dropdowns) */
+select {
+    background-color: var(--field-bg);
+    color: var(--text-color);
+    border: 1px solid #6b7280;
+}
+
+[data-theme="light"] select {
+    border: 1px solid #d1d5db;
+}
+
 /* Modal */
 #submit-modal {
     background-color: rgba(0, 0, 0, 0.5);
@@ -170,4 +185,9 @@ button:hover {
 [data-theme="light"] #submit-modal textarea {
     background-color: #e5e7eb; /* Light gray for inputs in light mode */
     border: 1px solid #d1d5db;
+}
+
+/* Hamburger Menu Dropdown */
+#hamburger-menu {
+    z-index: 10;
 }
