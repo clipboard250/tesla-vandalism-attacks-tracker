@@ -1,4 +1,4 @@
-:root {
+k:root {
     --bg-color: #1a1a1a; /* Dark mode background */
     --text-color: #d1d5db; /* Light gray body text */
     --header-color: #ffffff; /* White headers */
@@ -81,7 +81,20 @@ header {
 
 #ticker .ticker-content {
     display: inline-block;
-    animation: scroll 20s linear infinite;
+    animation: scroll 30s linear infinite; /* Default duration for desktop */
+}
+
+/* Responsive ticker speed */
+@media (max-width: 768px) {
+    #ticker .ticker-content {
+        animation: scroll 40s linear infinite; /* Slower for mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    #ticker .ticker-content {
+        animation: scroll 30s linear infinite; /* Standard for desktop */
+    }
 }
 
 @keyframes scroll {
