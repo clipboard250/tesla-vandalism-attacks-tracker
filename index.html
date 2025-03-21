@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Forced redeploy to refresh cache - March 20, 2025 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Archivo:wght@400;500&family=Archivo+Black&display=swap" rel="stylesheet">
     <!-- Tailwind CSS (for styling) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- Custom JavaScript -->
@@ -52,8 +55,8 @@
             <div>
                 <label for="export-format" class="font-montserrat">Export Format:</label>
                 <select id="export-format" class="bg-gray-700 p-2 rounded">
-                    <option value="json">JSON</option>
                     <option value="csv">CSV</option>
+                    <option value="pdf">PDF</option>
                 </select>
             </div>
             <div>

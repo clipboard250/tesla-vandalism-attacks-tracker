@@ -55,9 +55,10 @@ function displayIncidents(incidents) {
 
 // Update the latest incident ticker
 function updateTicker(incidents) {
-    const latestIncident = incidents[0]; // Already sorted newest to oldest in incidents.json
     const ticker = document.getElementById('ticker');
-    ticker.innerHTML = `Latest Incident: ${formatDate(latestIncident.date)} - ${latestIncident.location} - ${latestIncident.type} - ${latestIncident.description}`;
+    const latestIncident = incidents[0]; // Already sorted newest to oldest in incidents.json
+    const tickerText = `Latest Incident: ${formatDate(latestIncident.date)} - ${latestIncident.location} - ${latestIncident.type} - ${latestIncident.description}`;
+    ticker.innerHTML = `<div class="ticker-content">${tickerText}</div>`;
 }
 
 // Filter and sort incidents
@@ -74,7 +75,7 @@ function filterAndSort() {
         filteredIncidents = filteredIncidents.filter(incident => incident.type === typeFilter);
         // Sort by date only if a specific type is selected
         filteredIncidents.sort((a, b) => {
-            const dateA = new Date(a.date + 'T00:00:00Z'); // Ensure consistent timezone (UTC)
+            const dateA = new Date(a.date + 'T00:00:00Z');
             const dateB = new Date(b.date + 'T00:00:00Z');
             return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
         });
@@ -93,6 +94,7 @@ function filterAndSort() {
     console.log('Sorted incidents:', filteredIncidents.map(incident => `${incident.date} - ${incident.type}`));
 
     displayIncidents(filteredIncidents);
+    updateTicker(filteredIncidents);
     window.currentFilteredIncidents = filteredIncidents; // Store filtered incidents for export
 }
 
@@ -116,6 +118,43 @@ function convertToCSV(incidents) {
     ].join('\n');
 }
 
+// Export filtered incidents to PDF
+function exportToPDF(incidents, filename) {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    let yPos = 20;
+
+    doc.setFontSize(16);
+    doc.text('Tesla Vandalism and Attacks Tracker', 10, yPos);
+    yPos += 10;
+
+    doc.setFontSize(12);
+    incidents.forEach((incident, index) => {
+        if (yPos > 270) {
+            doc.addPage();
+            yPos = 10;
+        }
+        doc.text(`${index + 1}. ${formatDate(incident.date)} - ${incident.type}`, 10, yPos);
+        yPos += 7;
+        doc.text(`Location: ${incident.location}`, 10, yPos);
+        yPos += 7;
+        doc.text(`Description: ${incident.description}`, 10, yPos, { maxWidth: 180 });
+        yPos += 10;
+        if (incident.newsLinks.length > 0) {
+            doc.text('News Links:', 10, yPos);
+            yPos += 7;
+            incident.newsLinks.forEach(link => {
+                doc.text(`${link.title}: ${link.url}`, 10, yPos, { maxWidth: 180 });
+                yPos += 7;
+            });
+        }
+        doc.text(`Additional Sources: ${incident.additionalSources}`, 10, yPos);
+        yPos += 10;
+    });
+
+    doc.save(filename);
+}
+
 // Export filtered incidents
 document.getElementById('export-btn').addEventListener('click', () => {
     const filteredIncidents = window.currentFilteredIncidents || window.incidents;
@@ -124,24 +163,21 @@ document.getElementById('export-btn').addEventListener('click', () => {
     const baseFilename = typeFilter === 'all' ? 'tesla-vandalism-incidents-all' : `tesla-vandalism-incidents-${typeFilter.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`;
     let blob, filename;
 
-    if (exportFormat === 'json') {
-        const jsonStr = JSON.stringify(filteredIncidents, null, 2);
-        blob = new Blob([jsonStr], { type: 'application/json' });
-        filename = `${baseFilename}.json`;
-    } else if (exportFormat === 'csv') {
+    if (exportFormat === 'csv') {
         const csvStr = convertToCSV(filteredIncidents);
         blob = new Blob([csvStr], { type: 'text/csv' });
         filename = `${baseFilename}.csv`;
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    } else if (exportFormat === 'pdf') {
+        exportToPDF(filteredIncidents, `${baseFilename}.pdf`);
     }
-
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
 });
 
 // Dark/Light mode toggle
@@ -155,7 +191,7 @@ themeToggle.addEventListener('click', () => {
 // Submission modal
 const submitBtn = document.getElementById('submit-btn');
 const submitModal = document.getElementById('submit-modal');
-const closeModal = document.getElementById('close-modal');
+const closeModal = document.getElementById('submit-modal');
 const submitViaEmail = document.getElementById('submit-via-email');
 const submitViaGitHub = document.getElementById('submit-via-github');
 

@@ -43,7 +43,7 @@ h1, h2, h3 {
 
 /* Ensure all text inherits the correct color */
 p, div, span, a, label {
-    color: var(--text-color);
+    color: var(--text-color) !important; /* Force text color for visibility */
 }
 
 /* Hyperlinks */
@@ -68,6 +68,25 @@ header {
 #ticker {
     background-color: var(--accent-color);
     color: #ffffff;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+#ticker .ticker-content {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Cards */
