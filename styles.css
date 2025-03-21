@@ -79,30 +79,44 @@ header {
     width: 100%;
 }
 
-#ticker .ticker-content {
+.ticker-wrapper {
+    display: inline-flex;
+    width: max-content; /* Ensure the wrapper fits the content */
+}
+
+.ticker-content {
     display: inline-block;
+    padding-right: 50px; /* Add space between repeated content for seamless looping */
+}
+
+#ticker-content-duplicate {
+    display: inline-block;
+    padding-right: 50px; /* Match the padding for consistency */
+}
+
+#ticker .ticker-wrapper {
     animation: scroll 30s linear infinite; /* Default duration for desktop */
 }
 
 /* Responsive ticker speed */
 @media (max-width: 768px) {
-    #ticker .ticker-content {
+    #ticker .ticker-wrapper {
         animation: scroll 40s linear infinite; /* Slower for mobile */
     }
 }
 
 @media (min-width: 769px) {
-    #ticker .ticker-content {
+    #ticker .ticker-wrapper {
         animation: scroll 30s linear infinite; /* Standard for desktop */
     }
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%); /* Move to the left by half the total width (since content is duplicated) */
     }
 }
 

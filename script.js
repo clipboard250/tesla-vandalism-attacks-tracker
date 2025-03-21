@@ -87,10 +87,12 @@ function displayIncidents(incidents) {
 
 // Update the latest incident ticker
 function updateTicker(incidents) {
-    const ticker = document.getElementById('ticker');
+    const tickerContent = document.getElementById('ticker-content');
+    const tickerContentDuplicate = document.getElementById('ticker-content-duplicate');
     const latestIncident = incidents[0]; // Already sorted newest to oldest in incidents.json
     const tickerText = `Latest Incident: ${formatDate(latestIncident.date)} - ${latestIncident.location} - ${latestIncident.type} - ${latestIncident.description}`;
-    ticker.innerHTML = `<div class="ticker-content">${tickerText}</div>`;
+    tickerContent.textContent = tickerText;
+    tickerContentDuplicate.textContent = tickerText; // Duplicate the content for seamless looping
 }
 
 // Filter and sort incidents

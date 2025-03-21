@@ -41,7 +41,10 @@
     <main class="p-4">
         <!-- Latest Incident Ticker -->
         <div id="ticker" class="bg-red-600 p-3 mb-4 rounded text-center font-montserrat">
-            Latest Incident: Loading...
+            <div class="ticker-wrapper">
+                <div class="ticker-content" id="ticker-content">Latest Incident: Loading...</div>
+                <div class="ticker-content" id="ticker-content-duplicate" aria-hidden="true">Latest Incident: Loading...</div>
+            </div>
         </div>
 
         <!-- Filter Bar -->
