@@ -96,7 +96,7 @@ function displayIncidents(incidents) {
             <p class="font-montserrat"><strong>Location:</strong> ${incident.location}</p>
             <p class="font-montserrat">${incident.description}</p>
             <p class="font-montserrat"><strong>News Links:</strong> ${incident.newsLinks.map(link => {
-                const sourceName = extractSourceName(link.url); // Use URL to extract source name
+                const sourceName = extractSourceName(link.url);
                 return `<a href="${link.url}" target="_blank" class="text-red-500 hover:underline">${sourceName}</a>`;
             }).join(', ')}</p>
         `;
@@ -160,7 +160,7 @@ function filterAndSort() {
 
 // Convert incidents to CSV format
 function convertToCSV(incidents) {
-    const headers = ['Date', 'Location', 'Type', 'Description', 'News Links', 'Verified'];
+    const headers = ['Date', 'Location', 'Type', 'Description', 'News Links', 'Additional Sources', 'Verified'];
     const rows = incidents.map(incident => {
         const newsLinks = incident.newsLinks.map(link => `${extractSourceName(link.url)}: ${link.url}`).join('; ');
         return [
@@ -169,6 +169,7 @@ function convertToCSV(incidents) {
             incident.type,
             `"${incident.description.replace(/"/g, '""')}"`, // Escape quotes in description
             `"${newsLinks.replace(/"/g, '""')}"`, // Escape quotes in news links
+            `"${incident.additionalSources.replace(/"/g, '""')}"`, // Escape quotes in additional sources
             incident.verified ? 'Yes' : 'No'
         ];
     });
@@ -223,6 +224,20 @@ function exportToPDF(incidents, filename) {
     doc.save(filename);
 }
 
+// Export all incidents as a CSV spreadsheet
+function exportAllIncidentsToCSV() {
+    const csvStr = convertToCSV(window.incidents);
+    const blob = new Blob([csvStr], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'tesla-incident-tracker-all-incidents.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
 // Export filtered incidents
 document.getElementById('export-btn').addEventListener('click', () => {
     const filteredIncidents = window.currentFilteredIncidents || window.incidents;
@@ -245,6 +260,13 @@ document.getElementById('export-btn').addEventListener('click', () => {
         URL.revokeObjectURL(url);
     } else if (exportFormat === 'pdf') {
         exportToPDF(filteredIncidents, `${baseFilename}.pdf`);
+    }
+});
+
+// Automatically export all incidents as a CSV when the page loads
+window.addEventListener('load', () => {
+    if (window.incidents) {
+        exportAllIncidentsToCSV();
     }
 });
 
