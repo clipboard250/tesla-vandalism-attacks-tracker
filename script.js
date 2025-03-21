@@ -20,7 +20,7 @@ fetch('incidents.json')
 // Format date as "Mar 7, 2025"
 function formatDate(dateString) {
     try {
-        const date = new Date(dateString);
+        const date = new Date(dateString + 'T00:00:00Z'); // Parse as UTC to avoid timezone shifts
         if (isNaN(date)) {
             throw new Error('Invalid date');
         }
