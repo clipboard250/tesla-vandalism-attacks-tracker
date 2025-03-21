@@ -166,7 +166,7 @@ function exportToPDF(incidents, filename) {
     yPos += 10;
     doc.setFontSize(10);
     doc.text(projectSubheadline, 10, yPos);
-    yPos += 10;
+    yPos += 15; // Add extra spacing for readability
 
     doc.setFontSize(12);
     incidents.forEach((incident, index) => {
