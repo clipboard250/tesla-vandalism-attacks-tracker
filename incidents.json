@@ -39,8 +39,10 @@
         "type": "Protests & Organized Actions",
         "description": "Coordinated nationwide protests: Hundreds protested at Tesla dealerships across multiple states, with peaceful demonstrations and some minor scuffles.",
         "newsLinks": [
-            {"title": "Guardian", "url": "https://www.theguardian.com/us-news/2025/mar/17/tesla-protests-elon-musk"},
-            {"title": "Business Insider", "url": "https://www.businessinsider.com/tesla-nationwide-protests-2025-03-15"}
+            {
+                "title": "DoJ says attacks on Tesla stores are 'domestic terrorism' as more incidents emerge",
+                "url": "https://www.businessinsider.com/tesla-attacks-vandalism-violence-domestic-terrorism-doj-elon-musk-2025-3"
+            }
         ],
         "verified": true
     },
@@ -48,10 +50,12 @@
         "date": "2025-03-13",
         "location": "Tigard, OR",
         "type": "Firearm Attacks",
-        "description": "Drive-by shooting (2nd incident): One week after the first attack on March 6, the Tigard Tesla store was targeted again before dawn with 10–15 shots, causing extensive damage.",
+        "description": "Drive-by shooting (2nd incident): One week after the first, the Tigard Tesla store was attacked again before dawn with 10–15 shots, causing extensive damage.",
         "newsLinks": [
-            {"title": "AP News", "url": "https://apnews.com/article/tesla-dealership-shooting-oregon-elon-musk-782907d226f22d5dc583d3abeefd34e2"},
-            {"title": "Statesman Journal", "url": "https://www.statesmanjournal.com/tesla-tigard-shooting-2025-03-13"}
+            {
+                "title": "Shots fired at Tesla dealership in Tigard, second shooting there in the past week",
+                "url": "https://ktvz.com/news/crime-courts/2025/03/13/shots-fired-at-tesla-dealership-in-tigard-second-shooting-there-in-the-past-week/"
+            }
         ],
         "verified": true
     },
@@ -59,9 +63,12 @@
         "date": "2025-03-11",
         "location": "Dedham, MA",
         "type": "Graffiti & Symbolic Attacks",
-        "description": "Tires slashed and graffiti: Six Tesla Cybertrucks at a Dedham dealership were vandalized with slashed tires and graffiti, confirmed by local police.",
+        "description": "Three Tesla vehicles were vandalized overnight at a service center in Dedham. Two Tesla Cybertrucks had words spray-painted on them, and all four tires on those trucks, as well as on a Tesla Model S, were slashed or damaged.",
         "newsLinks": [
-            {"title": "Boston.com", "url": "https://www.boston.com/news/tesla-dedham-vandalism-2025-03-11"}
+            {
+                "title": "3 Teslas vandalized at dealership in Dedham, police say",
+                "url": "https://www.boston.com/news/crime/2025/03/11/three-tesla-vehicles-damaged-at-dealership-in-dedham-police-say/"
+            }
         ],
         "verified": true
     },
@@ -69,9 +76,12 @@
         "date": "2025-03-09",
         "location": "Seattle, WA",
         "type": "Arson & Explosions",
-        "description": "Confirmed fire: A blaze destroyed four Tesla Cybertrucks parked at a Tesla lot in Seattle, with ATF investigating.",
+        "description": "A blaze destroyed four Tesla Cybertrucks parked at a Tesla lot in Seattle.",
         "newsLinks": [
-            {"title": "AP News", "url": "https://apnews.com/article/tesla-seattle-fire-cybertrucks-2025-03-09"}
+            {
+                "title": "Fire that damaged four Tesla Cybertrucks in Seattle under investigation",
+                "url": "https://apnews.com/article/tesla-cybertruck-fire-seattle-7cd720096694b8455684db31159ed666"
+            }
         ],
         "verified": true
     },
@@ -79,9 +89,12 @@
         "date": "2025-03-08",
         "location": "Manhattan, NY",
         "type": "Protests & Organized Actions",
-        "description": "'Tesla Takedown' rally: Over 350 protesters gathered outside the Tesla showroom, occupying it and forcing a shutdown; NYPD arrested 6 people, DOJ classifying as 'domestic extremism.'",
+        "description": "'Tesla Takedown' rally: Over 350 protesters gathered outside the Tesla showroom, occupying it and forcing a shutdown. NYPD arrested 6 people.",
         "newsLinks": [
-            {"title": "El País", "url": "https://elpais.com/international/2025-03-08/tesla-takedown-rally-manhattan.html"}
+            {
+                "title": "Primeros detenidos por 'terrorismo doméstico' por el 'Tesla Takedown', el movimiento protesta contra Elon Musk",
+                "url": "https://elpais.com/us/2025-03-20/primeros-detenidos-por-terrorismo-domestico-por-el-tesla-takedown-el-movimiento-protesta-contra-elon-musk.html"
+            }
         ],
         "verified": true
     },
@@ -89,9 +102,12 @@
         "date": "2025-03-07",
         "location": "North Charleston, SC",
         "type": "Arson & Explosions",
-        "description": "Molotov attack: A 24-year-old man threw incendiary devices at a Tesla charging station, accidentally set himself on fire, and left motive graffiti; confirmed charges by DOJ.",
+        "description": "Molotov attack & arrest: A 24-year-old man threw incendiary devices at a Tesla charging station and accidentally set himself on fire.",
         "newsLinks": [
-            {"title": "DOJ SC", "url": "https://www.justice.gov/usao-sc/pr/north-charleston-tesla-arson-2025-03-07"}
+            {
+                "title": "James Island Man Charged for Arson of a N. Charleston Tesla Charging Station",
+                "url": "https://www.justice.gov/usao-sc/pr/james-island-man-charged-arson-n-charleston-tesla-charging-station"
+            }
         ],
         "verified": true
     },
@@ -99,10 +115,12 @@
         "date": "2025-03-07",
         "location": "Loveland, CO",
         "type": "Arson & Explosions",
-        "description": "Series of Molotov and Nazi graffiti attacks: A suspect conducted multiple attacks on a Tesla dealership, culminating in an arson fire; suspect charged.",
+        "description": "Copycat fire: A month after the original Loveland attacks, an arson fire was reported at the same Tesla center.",
         "newsLinks": [
-            {"title": "AP News", "url": "https://apnews.com/article/loveland-tesla-arson-graffiti-2025-03-07"},
-            {"title": "DOJ Colorado", "url": "https://www.justice.gov/usao-co/pr/loveland-tesla-arson-charges-2025-03-07"}
+            {
+                "title": "Another arrest made in vandalism at Colorado Tesla dealership",
+                "url": "https://apnews.com/article/tesla-vandalism-colorado-450ac36080615a2622601248885f41c7"
+            }
         ],
         "verified": true
     },
