@@ -1,16 +1,34 @@
 // Load incidents from incidents.json
 fetch('incidents.json')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to load incidents.json');
+        }
+        return response.json();
+    })
     .then(data => {
         window.incidents = data; // Store incidents globally
         displayIncidents(data); // Initial display
         updateTicker(data); // Update the latest incident ticker
+    })
+    .catch(error => {
+        console.error('Error loading incidents:', error);
+        const incidentsContainer = document.getElementById('incidents');
+        incidentsContainer.innerHTML = '<p class="text-red-500">Error loading incidents. Please try again later.</p>';
     });
 
 // Format date as "Mar 7, 2025"
 function formatDate(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    try {
+        const date = new Date(dateString);
+        if (isNaN(date)) {
+            throw new Error('Invalid date');
+        }
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    } catch (error) {
+        console.error('Error formatting date:', error);
+        return dateString; // Fallback to original string if formatting fails
+    }
 }
 
 // Display incidents as cards
@@ -94,4 +112,36 @@ const submitBtn = document.getElementById('submit-btn');
 const submitModal = document.getElementById('submit-modal');
 const closeModal = document.getElementById('close-modal');
 const submitViaEmail = document.getElementById('submit-via-email');
-const submitViaGitHub = document "Submit a New Incident" button, and the modal form should now have visible text for all prompts (e.g., “Date:”, “Location:”, etc.) without needing to highlight them.
+const submitViaGitHub = document.getElementById('submit-via-github');
+
+submitBtn.addEventListener('click', () => {
+    submitModal.classList.remove('hidden');
+});
+
+closeModal.addEventListener('click', () => {
+    submitModal.classList.add('hidden');
+});
+
+submitViaEmail.addEventListener('click', () => {
+    const date = document.getElementById('submit-date').value;
+    const location = document.getElementById('submit-location').value;
+    const type = document.getElementById('submit-type').value;
+    const description = document.getElementById('submit-description').value;
+    const sources = document.getElementById('submit-sources').value;
+    const subject = encodeURIComponent('New Tesla Vandalism Incident Submission');
+    const body = encodeURIComponent(`Date: ${date}\nLocation: ${location}\nType: ${type}\nDescription: ${description}\nSources: ${sources}`);
+    window.location.href = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+    submitModal.classList.add('hidden');
+});
+
+submitViaGitHub.addEventListener('click', () => {
+    const date = document.getElementById('submit-date').value;
+    const location = document.getElementById('submit-location').value;
+    const type = document.getElementById('submit-type').value;
+    const description = document.getElementById('submit-description').value;
+    const sources = document.getElementById('submit-sources').value;
+    const issueTitle = encodeURIComponent('New Incident Submission');
+    const issueBody = encodeURIComponent(`**Date:** ${date}\n**Location:** ${location}\n**Type:** ${type}\n**Description:** ${description}\n**Sources:** ${sources}`);
+    window.location.href = `https://github.com/clipboard250/tesla-vandalism-attacks-tracker/issues/new?title=${issueTitle}&body=${issueBody}`;
+    submitModal.classList.add('hidden');
+});

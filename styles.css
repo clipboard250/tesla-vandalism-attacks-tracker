@@ -125,6 +125,12 @@ button:hover {
 }
 
 /* Modal form elements */
+#submit-modal h2,
+#submit-modal label,
+#submit-modal button {
+    color: var(--text-color) !important; /* Force text color for visibility */
+}
+
 #submit-modal input,
 #submit-modal select,
 #submit-modal textarea {
