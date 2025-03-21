@@ -26,14 +26,15 @@
         <div class="flex items-center space-x-2">
             <!-- Submit a New Incident Button (Desktop) -->
             <button id="submit-btn-top" class="bg-red-600 px-3 py-1 rounded font-montserrat hover:bg-red-700 md:block hidden">Submit a New Incident</button>
-            <!-- Dark/Light Mode Toggle -->
-            <button id="theme-toggle" class="bg-gray-700 px-3 py-1 rounded">Toggle Dark/Light Mode</button>
+            <!-- Dark/Light Mode Toggle (Desktop Only) -->
+            <button id="theme-toggle" class="bg-gray-700 px-3 py-1 rounded md:block hidden">Toggle Dark/Light Mode</button>
             <!-- Hamburger Menu (Mobile) -->
             <button id="hamburger-btn" class="md:hidden text-white text-2xl focus:outline-none">☰</button>
         </div>
         <!-- Dropdown Menu for Mobile -->
         <div id="hamburger-menu" class="hidden absolute top-16 right-4 bg-gray-800 p-4 rounded shadow-lg md:hidden">
-            <button id="submit-btn-mobile" class="bg-red-600 px-3 py-1 rounded font-montserrat hover:bg-red-700 w-full text-left">Submit a New Incident</button>
+            <button id="submit-btn-mobile" class="bg-red-600 px-3 py-1 rounded font-montserrat hover:bg-red-700 w-full text-left mb-2">Submit a New Incident</button>
+            <button id="theme-toggle-mobile" class="bg-gray-700 px-3 py-1 rounded font-montserrat w-full text-left">Toggle Dark/Light Mode</button>
         </div>
     </header>
 

@@ -227,11 +227,15 @@ document.getElementById('export-btn').addEventListener('click', () => {
 
 // Dark/Light mode toggle
 const themeToggle = document.getElementById('theme-toggle');
-themeToggle.addEventListener('click', () => {
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+const toggleTheme = () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     document.documentElement.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
     themeToggle.textContent = currentTheme === 'light' ? 'Toggle Dark/Light Mode' : 'Toggle Dark/Light Mode';
-});
+    themeToggleMobile.textContent = currentTheme === 'light' ? 'Toggle Dark/Light Mode' : 'Toggle Dark/Light Mode';
+};
+themeToggle.addEventListener('click', toggleTheme);
+themeToggleMobile.addEventListener('click', toggleTheme);
 
 // Hamburger menu toggle
 const hamburgerBtn = document.getElementById('hamburger-btn');
