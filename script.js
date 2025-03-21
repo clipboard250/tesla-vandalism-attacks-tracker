@@ -1,6 +1,6 @@
 // Project name and subheadline
 const projectName = "Tesla Incident Tracker";
-const projectSubheadline = "A public tool built by Tesla enthusiasts to help researchers and Tesla supporters stay informed.";
+const projectSubheadline = "A public tool built by a Tesla lover to help people stay informed.";
 
 // Load incidents from incidents.json
 fetch('incidents.json')
@@ -12,8 +12,6 @@ fetch('incidents.json')
     })
     .then(data => {
         window.incidents = data; // Store incidents globally (already sorted newest to oldest in incidents.json)
-        // Update the project title in the header
-        document.getElementById('project-title').textContent = projectName;
         displayIncidents(data); // Initial display
         updateTicker(data); // Update the latest incident ticker
     })
