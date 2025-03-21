@@ -43,7 +43,6 @@ function displayIncidents(incidents) {
             <p class="font-montserrat"><strong>Location:</strong> ${incident.location}</p>
             <p class="font-montserrat">${incident.description}</p>
             <p class="font-montserrat"><strong>News Links:</strong> ${incident.newsLinks.map(link => `<a href="${link.url}" target="_blank" class="text-red-500 hover:underline">${link.title}</a>`).join(', ')}</p>
-            <p class="font-montserrat"><strong>Screenshots:</strong> ${incident.screenshotLinks}</p>
             <p class="font-montserrat"><strong>Additional Sources:</strong> ${incident.additionalSources}</p>
         `;
         incidentsContainer.appendChild(card);
@@ -82,13 +81,44 @@ function filterAndSort() {
     window.currentFilteredIncidents = filteredIncidents; // Store filtered incidents for export
 }
 
-// Export filtered incidents as JSON
+// Convert incidents to CSV format
+function convertToCSV(incidents) {
+    const headers = ['Date', 'Location', 'Type', 'Description', 'News Links', 'Additional Sources'];
+    const rows = incidents.map(incident => {
+        const newsLinks = incident.newsLinks.map(link => `${link.title}: ${link.url}`).join('; ');
+        return [
+            formatDate(incident.date),
+            incident.location,
+            incident.type,
+            `"${incident.description.replace(/"/g, '""')}"`, // Escape quotes in description
+            `"${newsLinks.replace(/"/g, '""')}"`, // Escape quotes in news links
+            `"${incident.additionalSources.replace(/"/g, '""')}"` // Escape quotes in additional sources
+        ];
+    });
+    return [
+        headers.join(','),
+        ...rows.map(row => row.join(','))
+    ].join('\n');
+}
+
+// Export filtered incidents
 document.getElementById('export-btn').addEventListener('click', () => {
     const filteredIncidents = window.currentFilteredIncidents || window.incidents;
     const typeFilter = document.getElementById('type-filter').value;
-    const filename = typeFilter === 'all' ? 'tesla-vandalism-incidents-all.json' : `tesla-vandalism-incidents-${typeFilter.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}.json`;
-    const jsonStr = JSON.stringify(filteredIncidents, null, 2);
-    const blob = new Blob([jsonStr], { type: 'application/json' });
+    const exportFormat = document.getElementById('export-format').value;
+    const baseFilename = typeFilter === 'all' ? 'tesla-vandalism-incidents-all' : `tesla-vandalism-incidents-${typeFilter.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`;
+    let blob, filename;
+
+    if (exportFormat === 'json') {
+        const jsonStr = JSON.stringify(filteredIncidents, null, 2);
+        blob = new Blob([jsonStr], { type: 'application/json' });
+        filename = `${baseFilename}.json`;
+    } else if (exportFormat === 'csv') {
+        const csvStr = convertToCSV(filteredIncidents);
+        blob = new Blob([csvStr], { type: 'text/csv' });
+        filename = `${baseFilename}.csv`;
+    }
+
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
